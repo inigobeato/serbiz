@@ -18,7 +18,6 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;padding:0}
 body{font-family:var(--font-body);font-size:15px;line-height:1.5;background:var(--paper);color:var(--ink);transition:background var(--transition),color var(--transition);-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;margin:0;line-height:1.25}h1{font-size:28px;letter-spacing:-.02em}h2{font-size:20px}h3{font-size:16px}h4{font-size:14px}a{color:var(--teal)}button{font-family:inherit}input,select,textarea{font-family:inherit;font-size:15px;color:var(--ink)}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .app{display:flex;min-height:100vh}
 .sidebar{width:var(--sidebar-w);flex-shrink:0;background:var(--teal);color:#e8e3d5;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;transition:transform var(--transition);z-index:40}
 .brand-block{padding:24px 20px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -31,38 +30,34 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;margin:0;line-height
 .nav button{display:flex;align-items:center;gap:11px;width:100%;background:none;border:0;color:rgba(232,227,213,.78);padding:10px 12px;border-radius:var(--radius-sm);cursor:pointer;font-size:13.5px;font-weight:500;text-align:left;transition:background var(--transition),color var(--transition);position:relative}
 .nav button:hover{background:rgba(255,255,255,.06);color:#fff}
 .nav button.active{background:rgba(200,153,46,.16);color:#fff;font-weight:600}
-.nav button.active::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;background:var(--gold);border-radius:0 3px 3px 0}
-.nav .ico{width:18px;height:18px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:1.8}
 .sidebar-foot{padding:12px 10px;border-top:1px solid rgba(255,255,255,.08);font-size:11px;color:rgba(232,227,213,.4);text-align:center}
 .sidebar-foot .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:middle}
 .main{flex:1;min-width:0;display:flex;flex-direction:column}
 .topbar{background:var(--card);border-bottom:1px solid var(--line);padding:12px 24px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:30}
-.hamburger{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--ink);border-radius:var(--radius-sm)}.hamburger:hover{background:var(--paper-2)}
+.hamburger{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--ink);border-radius:var(--radius-sm)}
 .topbar-title{font-family:var(--font-display);font-size:17px;font-weight:700;flex:1;letter-spacing:-.01em}
 .topbar-actions{display:flex;gap:6px;align-items:center}
-.icon-btn{background:none;border:1px solid transparent;padding:8px;border-radius:var(--radius-sm);cursor:pointer;color:var(--ink-2);display:grid;place-items:center;transition:all var(--transition)}
+.icon-btn{background:none;border:1px solid transparent;padding:8px;border-radius:var(--radius-sm);cursor:pointer;color:var(--ink-2);display:grid;place-items:center}
 .icon-btn:hover{background:var(--paper-2);color:var(--ink);border-color:var(--line)}
 .icon-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
 .content{max-width:1180px;margin:0 auto;padding:26px 24px 80px;width:100%}
-.page{display:none;animation:fadeIn .2s ease}.page.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.page{display:none}.page.active{display:block}
 .page-head{margin-bottom:22px}.page-head .sub{color:var(--ink-2);margin:6px 0 0;font-size:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)}
 .grid{display:grid;gap:14px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .stats .card{padding:16px 18px}
 .stat-label{font-size:11px;color:var(--ink-3);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
 .stat-value{font-family:var(--font-display);font-size:26px;font-weight:700;margin-top:6px;letter-spacing:-.02em;color:var(--ink)}
-.stat-hint{font-size:12px;color:var(--ink-3);margin-top:4px}
-.btn{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:#fff;border:0;border-radius:var(--radius-sm);padding:10px 16px;font-weight:600;font-size:14px;cursor:pointer;transition:all var(--transition)}
-.btn:hover{background:var(--teal-2)}.btn:active{transform:translateY(1px)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:#fff;border:0;border-radius:var(--radius-sm);padding:10px 16px;font-weight:600;font-size:14px;cursor:pointer}
+.btn:hover{background:var(--teal-2)}.btn:disabled{opacity:.5;cursor:not-allowed}
 .btn.alt{background:rgba(15,76,76,.08);color:var(--teal)}.btn.alt:hover{background:rgba(15,76,76,.14)}
 .btn.light{background:var(--card);color:var(--ink);border:1px solid var(--line)}.btn.light:hover{background:var(--paper-2)}
-.btn.gold{background:var(--gold);color:#fff}.btn.gold:hover{background:var(--gold-2)}
+.btn.gold{background:var(--gold);color:#fff}
 .btn.red{background:rgba(162,58,50,.1);color:var(--red)}.btn.red:hover{background:rgba(162,58,50,.18)}
 .btn.sm{padding:7px 12px;font-size:13px}
 .field{margin:12px 0}
-.field label{display:block;font-size:12px;font-weight:600;color:var(--ink-2);margin-bottom:5px;letter-spacing:.01em}
-.field input,.field select,.field textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);color:var(--ink);transition:border-color var(--transition),box-shadow var(--transition)}
+.field label{display:block;font-size:12px;font-weight:600;color:var(--ink-2);margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);color:var(--ink)}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,76,76,.12)}
 .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row-between{justify-content:space-between}
 .muted{color:var(--ink-3)}.small{font-size:12px}.right{text-align:right}
@@ -70,34 +65,33 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;margin:0;line-height
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 th{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:10px 12px;background:var(--paper-2);border-bottom:1px solid var(--line)}
 td{padding:10px 12px;border-bottom:1px solid var(--line-2);vertical-align:middle}
-tbody tr:hover{background:var(--paper-2)}tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--paper-2)}
 tfoot th{background:var(--paper-2);color:var(--ink);font-size:13px;letter-spacing:0;text-transform:none;border-top:2px solid var(--line);border-bottom:0;padding:12px}
-.num{font-variant-numeric:tabular-nums;text-align:right;font-family:'Inter',sans-serif}
+.num{font-variant-numeric:tabular-nums;text-align:right}
 .num.dr{color:var(--red)}.num.cr{color:var(--green)}
-.tag{display:inline-block;font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--paper-2);color:var(--ink-2);letter-spacing:.03em}
+.tag{display:inline-block;font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--paper-2);color:var(--ink-2)}
 .tag.g{background:rgba(47,107,79,.12);color:var(--green)}.tag.r{background:rgba(162,58,50,.12);color:var(--red)}
-.notice{background:rgba(200,153,46,.09);border:1px solid rgba(200,153,46,.28);color:var(--ink-2);padding:12px 14px;border-radius:var(--radius-sm);font-size:13px;margin:14px 0;line-height:1.55}
+.notice{background:rgba(200,153,46,.09);border:1px solid rgba(200,153,46,.28);color:var(--ink-2);padding:12px 14px;border-radius:var(--radius-sm);font-size:13px;margin:14px 0}
 .notice.info{background:rgba(15,76,76,.06);border-color:rgba(15,76,76,.2)}
 .notice.danger{background:rgba(162,58,50,.08);border-color:rgba(162,58,50,.28);color:var(--red)}
 .empty{text-align:center;padding:40px 20px;color:var(--ink-3)}
 .empty h4{color:var(--ink-2);margin-bottom:6px}.empty p{font-size:13px;max-width:340px;margin:0 auto}
 #toasts{position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:8px;max-width:340px}
-.toast{background:var(--ink);color:var(--paper);padding:12px 16px;border-radius:var(--radius-sm);box-shadow:0 8px 24px rgba(0,0,0,.24);font-size:13.5px;display:flex;gap:12px;align-items:center;animation:slideUp .25s ease}
-@keyframes slideUp{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
+.toast{background:var(--ink);color:var(--paper);padding:12px 16px;border-radius:var(--radius-sm);box-shadow:0 8px 24px rgba(0,0,0,.24);font-size:13.5px;display:flex;gap:12px;align-items:center}
 .toast.ok{background:var(--green)}.toast.err{background:var(--red)}
 .toast button{background:rgba(255,255,255,.16);color:#fff;border:0;padding:4px 10px;border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;margin-left:auto}
-.modal-bg{position:fixed;inset:0;background:rgba(10,20,18,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:500;padding:20px}
+.modal-bg{position:fixed;inset:0;background:rgba(10,20,18,.55);display:none;align-items:center;justify-content:center;z-index:500;padding:20px}
 .modal-bg.open{display:flex}
-.modal{background:var(--card);border-radius:var(--radius);max-width:520px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:pop .2s ease}
-@keyframes pop{from{transform:scale(.96);opacity:0}to{transform:none;opacity:1}}
+.modal{background:var(--card);border-radius:var(--radius);max-width:520px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
 .modal-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.modal-body{padding:22px}.modal-foot{padding:16px 22px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end}
-#cmd{position:fixed;inset:0;background:rgba(10,20,18,.5);backdrop-filter:blur(3px);z-index:600;display:none;align-items:flex-start;justify-content:center;padding:80px 20px}
+.modal-body{padding:22px}
+.modal-foot{padding:16px 22px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end}
+#cmd{position:fixed;inset:0;background:rgba(10,20,18,.5);z-index:600;display:none;align-items:flex-start;justify-content:center;padding:80px 20px}
 #cmd.open{display:flex}
 .cmd-box{background:var(--card);border-radius:var(--radius);width:100%;max-width:560px;box-shadow:0 20px 60px rgba(0,0,0,.3);overflow:hidden}
 .cmd-input{width:100%;padding:16px 20px;font-size:16px;border:0;outline:0;background:none;color:var(--ink);border-bottom:1px solid var(--line)}
 .cmd-list{max-height:380px;overflow-y:auto;padding:8px}
-.cmd-item{padding:11px 14px;border-radius:var(--radius-sm);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:14px}
+.cmd-item{padding:11px 14px;border-radius:var(--radius-sm);cursor:pointer;font-size:14px}
 .cmd-item:hover,.cmd-item.sel{background:var(--paper-2)}
 kbd{font-family:monospace;font-size:11px;background:var(--paper-2);border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--ink-2)}
 .sidebar-scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:35}
@@ -108,50 +102,49 @@ kbd{font-family:monospace;font-size:11px;background:var(--paper-2);border:1px so
   .grid-4{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr}.stat-value{font-size:22px}
 }
 @media(max-width:480px){.grid-4{grid-template-columns:1fr}#toasts{left:12px;right:12px;bottom:12px;max-width:none}}
-@media print{.sidebar,.topbar,.no-print,#toasts,.sidebar-scrim{display:none!important}.app{display:block}.content{padding:0;max-width:none}.page{display:none!important}.page.active{display:block!important}.card{break-inside:avoid;box-shadow:none;border:1px solid #ccc;margin:10px 0}body{background:#fff;font-size:11.5px}h1{font-size:18px}.stat-value{font-size:18px}thead{display:table-header-group}tr{break-inside:avoid}}
+@media print{.sidebar,.topbar,.no-print,#toasts,.sidebar-scrim{display:none!important}.app{display:block}.content{padding:0;max-width:none}.page{display:none!important}.page.active{display:block!important}.card{break-inside:avoid;box-shadow:none;border:1px solid #ccc;margin:10px 0}body{background:#fff;font-size:11.5px}}
 .acct-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:14px}
 .acct-toolbar .field{flex:1;min-width:140px;margin:0}
-.acct-chip{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;letter-spacing:.05em;text-transform:uppercase}
+.acct-chip{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;text-transform:uppercase}
 .acct-chip.asset{background:rgba(15,76,76,.12);color:var(--teal)}
 .acct-chip.liability{background:rgba(162,58,50,.12);color:var(--red)}
 .acct-chip.equity{background:rgba(200,153,46,.18);color:var(--gold-2)}
 .acct-chip.revenue{background:rgba(47,107,79,.14);color:var(--green)}
 .acct-chip.expense{background:rgba(200,153,46,.12);color:var(--gold-2)}
-.acct-chip.inactive{background:var(--paper-2);color:var(--ink-3);text-decoration:line-through}
 .acct-name{font-weight:600;color:var(--ink)}.acct-note{font-size:11.5px;color:var(--ink-3);margin-top:2px}
 .acct-row-inactive{opacity:.55}
 .acct-type-select{padding:6px 8px;font-size:12.5px;border-radius:6px}
-.kind-badge{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:99px;letter-spacing:.06em;text-transform:uppercase;margin-left:6px;vertical-align:middle}
+.kind-badge{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:99px;text-transform:uppercase;margin-left:6px;vertical-align:middle}
 .kind-badge.adjusting{background:rgba(200,153,46,.18);color:var(--gold-2)}
 .kind-badge.closing{background:rgba(15,76,76,.15);color:var(--teal)}
 .kind-badge.reversing{background:rgba(37,99,235,.14);color:#1e40af}
 .tb-toggle{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
-.tb-toggle button{background:none;border:0;padding:8px 14px;font-size:12.5px;font-weight:600;color:var(--ink-2);cursor:pointer;transition:all var(--transition)}
-.tb-toggle button.active{background:var(--teal);color:#fff}.tb-toggle button:not(.active):hover{background:var(--paper-2)}
+.tb-toggle button{background:none;border:0;padding:8px 14px;font-size:12.5px;font-weight:600;color:var(--ink-2);cursor:pointer}
+.tb-toggle button.active{background:var(--teal);color:#fff}
 .depr-calc{background:var(--paper-2);padding:12px;border-radius:8px;margin:10px 0}.depr-calc .field{margin:6px 0}
 .closing-preview{background:var(--paper-2);padding:14px;border-radius:8px;margin:10px 0;font-size:13px}
 .closing-preview table{margin-top:8px}.closing-preview td{padding:6px 10px;font-size:12.5px}
-.worksheet-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:16px}
+.worksheet-wrap{overflow-x:auto;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:16px}
 table.worksheet{width:100%;border-collapse:collapse;font-size:12px;min-width:900px}
-table.worksheet th{font-size:9.5px;letter-spacing:.06em;padding:8px 6px;background:var(--paper-2);border-bottom:1px solid var(--line);border-right:1px solid var(--line-2);text-align:center;vertical-align:middle}
+table.worksheet th{font-size:9.5px;padding:8px 6px;background:var(--paper-2);border-bottom:1px solid var(--line);border-right:1px solid var(--line-2);text-align:center;vertical-align:middle}
 table.worksheet th:first-child{text-align:left;padding-left:12px}
-table.worksheet td{padding:7px 6px;border-bottom:1px solid var(--line-2);border-right:1px solid var(--line-2);font-variant-numeric:tabular-nums;text-align:right;font-size:12px}
-table.worksheet td:first-child{text-align:left;padding-left:12px;font-variant-numeric:normal;font-size:12.5px;border-left:1px solid var(--line-2)}
+table.worksheet td{padding:7px 6px;border-bottom:1px solid var(--line-2);border-right:1px solid var(--line-2);text-align:right;font-size:12px}
+table.worksheet td:first-child{text-align:left;padding-left:12px;font-size:12.5px;border-left:1px solid var(--line-2)}
 table.worksheet th:last-child,table.worksheet td:last-child{border-right:0}
 table.worksheet .group-start{border-left:2px solid var(--teal)}
-table.worksheet .row-total td{background:var(--paper-2);font-weight:700;border-top:2px solid var(--line);color:var(--ink)}
+table.worksheet .row-total td{background:var(--paper-2);font-weight:700;border-top:2px solid var(--line)}
 .worksheet-mode{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);margin-bottom:14px}
 .worksheet-mode button{background:none;border:0;padding:8px 14px;font-size:12.5px;font-weight:600;color:var(--ink-2);cursor:pointer}
 .worksheet-mode button.active{background:var(--teal);color:#fff}
-.worksheet-input{width:100%;padding:4px 6px;font-size:12px;border:1px solid transparent;border-radius:4px;background:transparent;text-align:right;font-variant-numeric:tabular-nums}
-.worksheet-input:hover{border-color:var(--line);background:var(--card)}
-.worksheet-input:focus{outline:0;border-color:var(--teal);background:var(--card);box-shadow:0 0 0 2px rgba(15,76,76,.15)}
+.worksheet-input{width:100%;padding:4px 6px;font-size:12px;border:1px solid transparent;border-radius:4px;background:transparent;text-align:right}
+.worksheet-input:focus{outline:0;border-color:var(--teal);background:var(--card)}
 .worksheet-status{font-size:12px;padding:10px 14px;border-radius:var(--radius-sm);margin-bottom:14px}
 .worksheet-status.ok{background:rgba(47,107,79,.1);color:var(--green);border:1px solid rgba(47,107,79,.3)}
 .worksheet-status.warn{background:rgba(162,58,50,.08);color:var(--red);border:1px solid rgba(162,58,50,.3)}
 .ws-post-toggle{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);font-size:12px}
 .ws-post-toggle button{background:none;border:0;padding:6px 12px;color:var(--ink-2);cursor:pointer;font-weight:600}
 .ws-post-toggle button.active{background:var(--gold);color:#fff}
+.rev-target{color:#1e40af;font-size:11px;font-weight:600;cursor:pointer;background:none;border:0;padding:0;text-decoration:underline}
 .hidden{display:none}
 </style>
 </head>
@@ -159,7 +152,7 @@ table.worksheet .row-total td{background:var(--paper-2);font-weight:700;border-t
 
 <aside class="sidebar" id="sidebar">
   <div class="brand-block">
-    <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="22" fill="#0F4C4C"/><path d="M20 78h60M20 68h60" stroke="#C8992E" stroke-width="1" opacity=".35"/><text x="50" y="70" font-size="56" font-family="Georgia,serif" font-weight="700" fill="#C8992E" text-anchor="middle">S</text></svg>
+    <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="22" fill="#0F4C4C"/><text x="50" y="70" font-size="56" font-family="Georgia,serif" font-weight="700" fill="#C8992E" text-anchor="middle">S</text></svg>
     <div class="brand-text"><div class="brand-name">SER<span>BIZ</span></div><div class="brand-sub">Service Business Ledger</div></div>
   </div>
   <nav class="nav" id="nav">
@@ -195,7 +188,7 @@ table.worksheet .row-total td{background:var(--paper-2);font-weight:700;border-t
     <button class="hamburger" id="menuBtn" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     <div class="topbar-title" id="topbar-title">Dashboard</div>
     <div class="topbar-actions">
-      <button class="icon-btn" id="cmdBtn" title="Command (Ctrl+K)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg></button>
+      <button class="icon-btn" id="cmdBtn" title="Command"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg></button>
       <button class="icon-btn" id="themeBtn" title="Toggle theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     </div>
   </header>
@@ -205,63 +198,62 @@ table.worksheet .row-total td{background:var(--paper-2);font-weight:700;border-t
   <div class="page-head"><h1>Accounting workspace</h1><p class="sub">Follow every transaction from source to statement.</p></div>
   <div class="grid grid-4 stats">
     <div class="card"><div class="stat-label">Transactions</div><div class="stat-value" id="sTx">0</div></div>
-    <div class="card"><div class="stat-label">Accounts in use</div><div class="stat-value" id="sAcc">0</div></div>
+    <div class="card"><div class="stat-label">Accounts</div><div class="stat-value" id="sAcc">0</div></div>
     <div class="card"><div class="stat-label">Total debits</div><div class="stat-value num dr" id="sDr">₱0.00</div></div>
     <div class="card"><div class="stat-label">Total credits</div><div class="stat-value num cr" id="sCr">₱0.00</div></div>
   </div>
   <div class="grid grid-2">
     <div class="card"><h3>Quick actions</h3><div class="row" style="margin-top:12px"><button class="btn" onclick="page('upload')">+ New transaction</button><button class="btn alt" onclick="page('reports')">Statements</button></div><div class="notice info small" style="margin-bottom:0">Data lives in this browser. Export a JSON backup from Settings.</div></div>
-    <div class="card"><h3>Last 6 months — net income</h3><div id="spark" style="height:110px"></div></div>
+    <div class="card"><h3>Recent activity</h3><div id="recent" class="empty"><h4>No transactions yet</h4><p>Start with a CSV upload or manual entry.</p></div></div>
   </div>
-  <div class="card"><div class="row row-between" style="margin-bottom:8px"><h3>Recent activity</h3><button class="btn light sm" onclick="page('journal')">View all</button></div><div id="recent" class="empty"><h4>No transactions yet</h4><p>Start with a CSV upload or a manual entry.</p></div></div>
 </section>
 
 <section class="page" id="upload">
-  <div class="page-head"><h1>Transactions</h1><p class="sub">Import a CSV or enter a single transaction. Every entry is reviewed before posting.</p></div>
+  <div class="page-head"><h1>Transactions</h1><p class="sub">Import CSV or enter a single transaction.</p></div>
   <div class="grid grid-2">
-    <div class="card"><h3>CSV upload</h3><p class="muted small">Required: date, description, amount. Optional: type.</p><div class="field"><label>CSV file</label><input type="file" id="csv" accept=".csv"></div><div class="row"><button class="btn" onclick="readCSV()">Analyze file</button><button class="btn light" onclick="downloadTemplate()">Template</button></div></div>
-    <div class="card"><h3>Manual transaction</h3><div class="field"><label>Date</label><input id="txDate" type="date"></div><div class="field"><label>Description</label><input id="txDesc" placeholder="Paid office rent in cash"></div><div class="field"><label>Amount</label><input id="txAmt" type="number" min="0.01" step="0.01"></div><div class="field"><label>Type</label><select id="txType"><option value="">Auto-suggest</option><option value="service">Cash service revenue</option><option value="creditservice">Service on account</option><option value="collection">Collect receivable</option><option value="expense">Cash expense</option><option value="payable">Expense on account</option><option value="payment">Pay supplier</option><option value="investment">Owner investment</option><option value="withdrawal">Owner withdrawal</option><option value="equipment">Equipment purchase</option></select></div><button class="btn" onclick="manual()">Analyze transaction</button></div>
+    <div class="card"><h3>CSV upload</h3><p class="muted small">Required: date, description, amount.</p><div class="field"><label>File</label><input type="file" id="csv" accept=".csv"></div><div class="row"><button class="btn" onclick="readCSV()">Analyze</button><button class="btn light" onclick="downloadTemplate()">Template</button></div></div>
+    <div class="card"><h3>Manual transaction</h3><div class="field"><label>Date</label><input id="txDate" type="date"></div><div class="field"><label>Description</label><input id="txDesc" placeholder="Paid office rent"></div><div class="field"><label>Amount</label><input id="txAmt" type="number" min="0.01" step="0.01"></div><div class="field"><label>Type</label><select id="txType"><option value="">Auto-suggest</option><option value="service">Cash service revenue</option><option value="creditservice">Service on account</option><option value="collection">Collect receivable</option><option value="expense">Cash expense</option><option value="payable">Expense on account</option><option value="payment">Pay supplier</option><option value="investment">Owner investment</option><option value="withdrawal">Owner withdrawal</option><option value="equipment">Equipment purchase</option></select></div><button class="btn" onclick="manual()">Analyze</button></div>
   </div>
-  <div class="card hidden" id="review"><div class="row row-between" style="margin-bottom:10px"><div><h3>Review before posting</h3><p class="muted small">Edit account titles or amounts. Balanced entries only.</p></div><button class="btn" onclick="post()">Post approved</button></div><div id="reviewRows"></div></div>
+  <div class="card hidden" id="review"><div class="row row-between" style="margin-bottom:10px"><div><h3>Review</h3><p class="muted small">Edit if needed. Balanced entries only.</p></div><button class="btn" onclick="post()">Post approved</button></div><div id="reviewRows"></div></div>
 </section>
 
 <section class="page" id="journal">
-  <div class="page-head"><h1>General Journal</h1><p class="sub">Every posted entry. Edit, void, or delete.</p></div>
-  <div class="card"><div class="row"><div class="field" style="flex:1;min-width:180px;margin:0"><input id="jSearch" placeholder="Search description or account…" oninput="renderJournal()"></div><button class="btn light sm" onclick="exportCSV('journal')">Export CSV</button></div></div>
+  <div class="page-head"><h1>General Journal</h1><p class="sub">Every posted entry.</p></div>
+  <div class="card"><div class="row"><div class="field" style="flex:1;min-width:180px;margin:0"><input id="jSearch" placeholder="Search…" oninput="renderJournal()"></div><button class="btn light sm" onclick="exportCSV('journal')">Export CSV</button></div></div>
   <div id="journalRows"></div>
-  <div id="journalPager" class="row no-print" style="justify-content:center;margin-top:14px"></div>
+  <div id="journalPager" class="row" style="justify-content:center;margin-top:14px"></div>
 </section>
 
 <section class="page" id="ledger">
-  <div class="page-head"><h1>General Ledger</h1><p class="sub">Account-by-account postings with running balance.</p></div>
+  <div class="page-head"><h1>General Ledger</h1><p class="sub">Account-by-account postings.</p></div>
   <div class="card"><div class="field" style="margin:0"><label>Account</label><select id="ledgerSelect" onchange="drawLedger()"></select></div></div>
   <div id="ledgerRows"></div>
 </section>
 
 <section class="page" id="trial">
-  <div class="page-head"><h1>Trial Balance</h1><p class="sub">Balances as of a chosen date, in three views.</p></div>
-  <div class="card"><div class="row row-between" style="flex-wrap:wrap;gap:10px"><div class="row" style="gap:10px"><div class="field" style="margin:0"><label>As of</label><input id="tbAsOf" type="date" onchange="trial()"></div><div class="tb-toggle" id="tbModeToggle"><button data-mode="unadjusted" onclick="setTbMode('unadjusted')">Unadjusted</button><button data-mode="adjusted" class="active" onclick="setTbMode('adjusted')">Adjusted</button><button data-mode="post-closing" onclick="setTbMode('post-closing')">Post-closing</button></div></div><button class="btn light sm" onclick="exportCSV('trial')">Export CSV</button></div><div class="muted small" id="tbModeHint" style="margin-top:8px"></div></div>
+  <div class="page-head"><h1>Trial Balance</h1><p class="sub">Balances in three views.</p></div>
+  <div class="card"><div class="row row-between" style="flex-wrap:wrap;gap:10px"><div class="row" style="gap:10px"><div class="field" style="margin:0"><label>As of</label><input id="tbAsOf" type="date" onchange="trial()"></div><div class="tb-toggle" id="tbModeToggle"><button data-mode="unadjusted" onclick="setTbMode('unadjusted')">Unadjusted</button><button data-mode="adjusted" class="active" onclick="setTbMode('adjusted')">Adjusted</button><button data-mode="post-closing" onclick="setTbMode('post-closing')">Post-closing</button></div></div><button class="btn light sm" onclick="exportCSV('trial')">Export CSV</button></div></div>
   <div class="card"><div style="text-align:center;font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:4px">TRIAL BALANCE</div><div class="muted small" id="tbDate" style="text-align:center;margin-bottom:16px"></div><div class="table-wrap" id="tb"></div><div id="tbStatus" class="notice"></div></div>
 </section>
 
 <section class="page" id="adjusting">
-  <div class="page-head"><h1>Adjusting Entries</h1><p class="sub">Record accruals, deferrals, and depreciation at period-end.</p></div>
+  <div class="page-head"><h1>Adjusting Entries</h1><p class="sub">Accruals, deferrals, depreciation.</p></div>
   <div class="grid grid-2">
-    <div class="card"><h3>Quick adjust</h3><div class="field"><label>Type</label><select id="adjType" onchange="updateAdjForm()"><option value="depreciation">Depreciation</option><option value="accrued-expense">Accrued expense</option><option value="accrued-revenue">Accrued revenue</option><option value="prepaid">Prepaid expense consumed</option><option value="unearned">Unearned revenue earned</option><option value="bad-debt">Estimated bad debt</option><option value="custom">Custom</option></select></div><div id="adjForm"></div><button class="btn" onclick="proposeAdjustment()">Propose entry</button></div>
+    <div class="card"><h3>Quick adjust</h3><div class="field"><label>Type</label><select id="adjType" onchange="updateAdjForm()"><option value="depreciation">Depreciation</option><option value="accrued-expense">Accrued expense</option><option value="accrued-revenue">Accrued revenue</option><option value="prepaid">Prepaid consumed</option><option value="unearned">Unearned earned</option><option value="bad-debt">Bad debt</option><option value="custom">Custom</option></select></div><div id="adjForm"></div><button class="btn" onclick="proposeAdjustment()">Propose</button></div>
     <div class="card"><h3>Period preview</h3><div class="field"><label>Period</label><input id="adjPeriod" type="month" onchange="renderAdjPreview()"></div><div id="adjPreview"></div></div>
   </div>
   <div class="card"><div class="row row-between" style="margin-bottom:8px"><h3>Posted adjusting entries</h3><span class="muted small" id="adjCount"></span></div><div id="adjustingList"></div></div>
 </section>
 
 <section class="page" id="closing">
-  <div class="page-head"><h1>Closing Entries</h1><p class="sub">Close revenue, expense, and drawing accounts to Income Summary, then to Owner's Capital.</p></div>
-  <div class="card"><div class="row"><div class="field" style="margin:0"><label>Period to close</label><input id="closePeriod" type="month" onchange="renderClosingPreview()"></div><button class="btn" onclick="renderClosingPreview()">Preview</button><button class="btn light" onclick="closePeriodNow()">Post closing</button></div><div class="notice small">Closing zeroes revenue, expense, and drawing accounts.</div></div>
+  <div class="page-head"><h1>Closing Entries</h1><p class="sub">Close revenues, expenses, drawings.</p></div>
+  <div class="card"><div class="row"><div class="field" style="margin:0"><label>Period</label><input id="closePeriod" type="month" onchange="renderClosingPreview()"></div><button class="btn" onclick="renderClosingPreview()">Preview</button><button class="btn light" onclick="closePeriodNow()">Post closing</button></div><div class="notice small">Closing zeroes revenue, expense, drawing accounts.</div></div>
   <div id="closingPreview"></div>
-  <div class="card"><h3>Closed periods</h3><div id="closedPeriodsList" class="empty">No periods closed yet.</div></div>
+  <div class="card"><h3>Closed periods</h3><div id="closedPeriodsList" class="empty">None yet.</div></div>
 </section>
 
 <section class="page" id="worksheet">
-  <div class="page-head"><h1>Worksheet</h1><p class="sub">10-column worksheet. Enter adjustments inline, post all at once.</p></div>
+  <div class="page-head"><h1>Worksheet</h1><p class="sub">10-column worksheet.</p></div>
   <div class="card">
     <div class="row row-between" style="flex-wrap:wrap;gap:12px">
       <div class="row" style="gap:10px;flex-wrap:wrap">
@@ -269,400 +261,886 @@ table.worksheet .row-total td{background:var(--paper-2);font-weight:700;border-t
         <div id="wsRangeControls"><div class="field" id="wsMonthField" style="margin:0"><label>Month</label><input id="wsPeriod" type="month" onchange="renderWorksheet()"></div><div id="wsCustomRange" style="display:none;gap:10px"><div class="field"><label>From</label><input id="wsFrom" type="date" onchange="renderWorksheet()"></div><div class="field"><label>To</label><input id="wsTo" type="date" onchange="renderWorksheet()"></div></div></div>
         <div class="worksheet-mode" id="wsModeToggle"><button data-mode="view" class="active" onclick="setWsMode('view')">View</button><button data-mode="edit" onclick="setWsMode('edit')">Interactive</button></div>
       </div>
-      <div class="row"><button class="btn light sm" onclick="exportWorksheetCSV()">Export CSV</button><button class="btn light sm" onclick="window.print()">Print</button></div>
+      <button class="btn light sm" onclick="exportWorksheetCSV()">Export</button>
     </div>
     <div class="notice info small" id="wsHint"></div>
   </div>
   <div class="worksheet-wrap" id="worksheetArea"><div class="empty"><p class="small">Choose a period.</p></div></div>
-  <div class="card no-print" id="wsPostArea" style="display:none">
-    <div class="row row-between" style="flex-wrap:wrap;gap:12px">
-      <div><h3>Post proposed adjustments</h3><p class="muted small" id="wsStatus">No adjustments entered.</p><div class="ws-post-toggle" id="wsPostModeToggle" style="margin-top:8px"><button data-pmode="compound" onclick="setWsPostMode('compound')">Compound</button><button data-pmode="separate" onclick="setWsPostMode('separate')">Separate</button></div></div>
-      <div class="row"><button class="btn light" onclick="clearWorksheetAdjustments()">Clear</button><button class="btn" onclick="postWorksheetAdjustments()">Post all</button></div>
-    </div>
-  </div>
+  <div class="card" id="wsPostArea" style="display:none"><div class="row row-between" style="flex-wrap:wrap;gap:12px"><div><h3>Post adjustments</h3><p class="muted small" id="wsStatus">None entered.</p></div><div class="row"><button class="btn light" onclick="clearWorksheetAdjustments()">Clear</button><button class="btn" onclick="postWorksheetAdjustments()">Post all</button></div></div></div>
 </section>
 
 <section class="page" id="reports">
-  <div class="page-head"><h1>Financial Statements</h1><p class="sub">Income statement, equity, balance sheet, cash flow.</p></div>
-  <div class="card no-print"><div class="row"><div class="field" style="flex:1;min-width:140px;margin:0"><label>From</label><input id="from" type="date"></div><div class="field" style="flex:1;min-width:140px;margin:0"><label>To</label><input id="to" type="date"></div><button class="btn" onclick="statements()">Generate</button><button class="btn light" onclick="window.print()">Print</button></div></div>
-  <div id="statementOutput"><div class="empty card"><h4>No statement generated yet</h4><p>Choose a period and press Generate.</p></div></div>
+  <div class="page-head"><h1>Financial Statements</h1></div>
+  <div class="card"><div class="row"><div class="field" style="flex:1;min-width:140px;margin:0"><label>From</label><input id="from" type="date"></div><div class="field" style="flex:1;min-width:140px;margin:0"><label>To</label><input id="to" type="date"></div><button class="btn" onclick="statements()">Generate</button><button class="btn light" onclick="window.print()">Print</button></div></div>
+  <div id="statementOutput"><div class="empty card"><h4>No statement yet</h4><p>Choose period and press Generate.</p></div></div>
 </section>
 
 <section class="page" id="archive">
-  <div class="page-head"><h1>Monthly Archive</h1><p class="sub">Snapshots of a month's journal and reports.</p></div>
-  <div class="card no-print"><div class="row"><div class="field" style="margin:0"><label>Month</label><input id="archiveMonth" type="month"></div><button class="btn" onclick="saveMonthlyArchive()">Save snapshot</button><button class="btn light" onclick="exportAllArchives()">Export all</button><button class="btn light" onclick="document.getElementById('restoreArchiveFile').click()">Restore</button><input type="file" id="restoreArchiveFile" accept=".json" style="display:none" onchange="restoreArchiveFromFile(event)"></div></div>
-  <div class="card"><h3 style="margin-bottom:10px">Saved months</h3><div id="archiveList" class="empty">No archives yet.</div></div>
+  <div class="page-head"><h1>Monthly Archive</h1></div>
+  <div class="card"><div class="row"><div class="field" style="margin:0"><label>Month</label><input id="archiveMonth" type="month"></div><button class="btn" onclick="saveMonthlyArchive()">Save</button><button class="btn light" onclick="exportAllArchives()">Export all</button></div></div>
+  <div class="card"><h3>Saved</h3><div id="archiveList" class="empty">None yet.</div></div>
   <div id="archiveView"></div>
 </section>
 
 <section class="page" id="accounts">
-  <div class="page-head"><h1>Chart of Accounts</h1><p class="sub">Every account's type and normal balance.</p></div>
+  <div class="page-head"><h1>Chart of Accounts</h1></div>
   <div class="card">
-    <div class="acct-toolbar"><div class="field"><label>Search</label><input id="acctSearch" placeholder="Account name…" oninput="renderAccounts()"></div><div class="field"><label>Filter</label><select id="acctFilter" onchange="renderAccounts()"><option value="">All types</option><option value="asset">Assets</option><option value="liability">Liabilities</option><option value="equity">Equity</option><option value="revenue">Revenue</option><option value="expense">Expenses</option><option value="inactive">Inactive</option></select></div><button class="btn" onclick="openAddAccount()">+ Add</button><button class="btn light" onclick="exportAccountsCSV()">Export</button></div>
-    <div class="notice info small">Changing type or normal side updates reports immediately. Renaming affects all journal entries.</div>
+    <div class="acct-toolbar"><div class="field"><label>Search</label><input id="acctSearch" placeholder="Name…" oninput="renderAccounts()"></div><div class="field"><label>Filter</label><select id="acctFilter" onchange="renderAccounts()"><option value="">All</option><option value="asset">Assets</option><option value="liability">Liabilities</option><option value="equity">Equity</option><option value="revenue">Revenue</option><option value="expense">Expenses</option></select></div><button class="btn" onclick="openAddAccount()">+ Add</button></div>
     <div id="accountsTable"></div>
   </div>
-  <div class="card"><h3>Bulk actions</h3><div class="row"><button class="btn alt" onclick="seedDefaultAccounts()">Seed defaults</button><button class="btn light" onclick="openMergeAccounts()">Merge…</button><button class="btn light" onclick="regenerateFromEntries()">Rebuild from journal</button></div></div>
+  <div class="card"><h3>Bulk</h3><div class="row"><button class="btn alt" onclick="seedDefaultAccounts()">Seed defaults</button><button class="btn light" onclick="regenerateFromEntries()">Rebuild</button></div></div>
 </section>
 
 <section class="page" id="settings">
-  <div class="page-head"><h1>Settings</h1><p class="sub">Appearance, security, backup.</p></div>
-  <div class="card"><h3>Appearance</h3><div class="field"><label>Theme</label><select id="themeSelect" onchange="setTheme(this.value)"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div>
-  <div class="card"><h3>Security</h3><p class="muted small" id="pinStatus">PIN lock disabled.</p><div class="row"><button class="btn alt" onclick="openPinSetup()">Set PIN</button><button class="btn light" onclick="lockNow()">Lock now</button><button class="btn red" onclick="removePin()">Remove PIN</button></div></div>
-  <div class="card"><h3>Backup &amp; restore</h3><p class="muted small" id="backupStatus">No backup exported yet.</p><div class="row"><button class="btn" onclick="backupAll()">Export backup (JSON)</button><button class="btn light" onclick="document.getElementById('restoreAllFile').click()">Restore</button><input type="file" id="restoreAllFile" accept=".json" style="display:none" onchange="restoreAllFromFile(event)"></div><div class="notice small">Safety backup auto-saved before any restore.</div></div>
-  <div class="card"><h3>Data health</h3><div id="health"></div></div>
-  <div class="card"><h3 style="color:var(--red)">Danger zone</h3><button class="btn red" onclick="resetBooks()">Reset all journal data</button></div>
+  <div class="page-head"><h1>Settings</h1></div>
+  <div class="card"><h3>Theme</h3><div class="field"><select id="themeSelect" onchange="setTheme(this.value)"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div>
+  <div class="card"><h3>Security</h3><p class="muted small" id="pinStatus">PIN disabled.</p><div class="row"><button class="btn alt" onclick="openPinSetup()">Set PIN</button><button class="btn light" onclick="lockNow()">Lock</button><button class="btn red" onclick="removePin()">Remove</button></div></div>
+  <div class="card"><h3>Backup</h3><p class="muted small" id="backupStatus">No backup yet.</p><div class="row"><button class="btn" onclick="backupAll()">Export JSON</button><button class="btn light" onclick="document.getElementById('restoreAllFile').click()">Restore</button><input type="file" id="restoreAllFile" accept=".json" style="display:none" onchange="restoreAllFromFile(event)"></div></div>
+  <div class="card"><h3>Health</h3><div id="health"></div></div>
+  <div class="card"><h3 style="color:var(--red)">Danger</h3><button class="btn red" onclick="resetBooks()">Reset all</button></div>
 </section>
 
 <section class="page" id="help">
-  <div class="page-head"><h1>How to Use SERBIZ</h1></div>
-  <div class="card"><h3>The workflow</h3><p class="small muted">1. Transactions — upload CSV or enter manually. 2. Review and post. 3. Check Journal, Ledger, Trial Balance. 4. Worksheet — enter adjustments, post all. 5. Statements. 6. Closing. 7. Archive month-end. 8. Backup JSON.</p></div>
-  <div class="card"><h3>Keyboard shortcuts</h3><p class="small">Ctrl+K — Command palette</p><p class="small">Esc — Close</p><p class="small">Ctrl+P — Print</p></div>
+  <div class="page-head"><h1>How to Use</h1></div>
+  <div class="card"><h3>Workflow</h3><p class="small muted">1. Transactions — upload CSV or manual. 2. Review and post. 3. Journal, Ledger, Trial Balance. 4. Worksheet. 5. Statements. 6. Closing. 7. Backup.</p></div>
+  <div class="card"><h3>Shortcuts</h3><p class="small">Ctrl+K — Command</p><p class="small">Esc — Close</p></div>
 </section>
 
 <section class="page" id="about">
   <div class="page-head"><h1>About SERBIZ</h1></div>
-  <div class="card"><div class="row" style="align-items:flex-start;gap:16px"><svg viewBox="0 0 100 100" width="64" height="64"><rect width="100" height="100" rx="22" fill="#0F4C4C"/><text x="50" y="70" font-size="56" font-family="Georgia,serif" font-weight="700" fill="#C8992E" text-anchor="middle">S</text></svg><div><h2>SERBIZ</h2><p class="muted small">Service Business Accounting · Version <b>3.0.0</b></p></div></div></div>
-  <div class="card"><h3>A LIAB Digital Studio product</h3><p class="small muted">Part of the LIAB family — <i>Likha para sa lahat.</i></p></div>
-  <div class="card"><h3>Disclaimer</h3><p class="small muted">Educational and small-business tool. Consult a licensed accountant before filing taxes.</p></div>
+  <div class="card"><h2>SERBIZ</h2><p class="muted small">Service Business Accounting · Version 3.0.1</p></div>
+  <div class="card"><h3>LIAB Digital Studio</h3><p class="small muted">Likha para sa lahat.</p></div>
 </section>
 
   </div>
 </main>
 
 <div id="toasts"></div>
-<div class="modal-bg" id="modalBg"><div class="modal" role="dialog"><div class="modal-head"><h3 id="modalTitle">Confirm</h3><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="modal-body" id="modalBody"></div><div class="modal-foot" id="modalFoot"></div></div></div>
+<div class="modal-bg" id="modalBg"><div class="modal"><div class="modal-head"><h3 id="modalTitle">Confirm</h3><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="modal-body" id="modalBody"></div><div class="modal-foot" id="modalFoot"></div></div></div>
 <div id="cmd" onclick="if(event.target===this)closeCmd()"><div class="cmd-box"><input class="cmd-input" id="cmdInput" placeholder="Search…" oninput="renderCmd()" onkeydown="cmdKey(event)"><div class="cmd-list" id="cmdList"></div></div></div>
 <div id="lockScreen" style="display:none;position:fixed;inset:0;background:var(--teal);z-index:9000;align-items:center;justify-content:center;flex-direction:column;color:#fff;padding:24px">
-  <h2 style="color:#fff;margin-bottom:8px">SERBIZ is locked</h2><p class="small" style="opacity:.7;margin-bottom:20px">Enter your PIN</p>
+  <h2 style="color:#fff;margin-bottom:8px">Locked</h2><p class="small" style="opacity:.7;margin-bottom:20px">Enter PIN</p>
   <input id="pinInput" type="password" inputmode="numeric" maxlength="8" placeholder="••••" style="padding:14px;font-size:22px;text-align:center;letter-spacing:8px;border:0;border-radius:8px;width:200px;background:rgba(255,255,255,.14);color:#fff;outline:0" onkeydown="if(event.key==='Enter')unlock()">
   <button class="btn gold" style="margin-top:16px" onclick="unlock()">Unlock</button>
 </div>
 
 <script>
-const $=id=>document.getElementById(id);
-const fmt=n=>'₱'+Number(n||0).toLocaleString('en-PH',{minimumFractionDigits:2,maximumFractionDigits:2});
-const fmtDate=d=>d?new Date(d+'T00:00:00').toLocaleDateString('en-PH',{year:'numeric',month:'short',day:'numeric'}):'';
-const today=new Date().toISOString().slice(0,10);
-const uid=()=>crypto.randomUUID?crypto.randomUUID():'id-'+Date.now()+'-'+Math.random().toString(36).slice(2,10);
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function nextPeriodFirstDay(dateStr){const d=new Date(dateStr+'T00:00:00');const y=d.getFullYear(),m=d.getMonth();return new Date(y,m+1,1).toISOString().slice(0,10);}
+var $=function(id){return document.getElementById(id);};
+var fmt=function(n){return '₱'+Number(n||0).toLocaleString('en-PH',{minimumFractionDigits:2,maximumFractionDigits:2});};
+var fmtDate=function(d){return d?new Date(d+'T00:00:00').toLocaleDateString('en-PH',{year:'numeric',month:'short',day:'numeric'}):'';};
+var today=new Date().toISOString().slice(0,10);
+var uid=function(){return (crypto&&crypto.randomUUID)?crypto.randomUUID():'id-'+Date.now()+'-'+Math.random().toString(36).slice(2,10);};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];});};
+function nextPeriodFirstDay(dateStr){var d=new Date(dateStr+'T00:00:00');var y=d.getFullYear(),m=d.getMonth();return new Date(y,m+1,1).toISOString().slice(0,10);}
 
-function toast(msg,type='',actionLabel,actionFn,ttl=4000){
-  const el=document.createElement('div');el.className='toast '+type;el.innerHTML=`<span>${esc(msg)}</span>`;
-  if(actionLabel&&actionFn){const b=document.createElement('button');b.textContent=actionLabel;b.onclick=()=>{actionFn();el.remove();};el.appendChild(b);}
+function toast(msg,type,actionLabel,actionFn,ttl){
+  type=type||'';ttl=ttl||4000;
+  var el=document.createElement('div');el.className='toast '+type;
+  var span=document.createElement('span');span.textContent=msg;el.appendChild(span);
+  if(actionLabel&&actionFn){var b=document.createElement('button');b.textContent=actionLabel;b.onclick=function(){actionFn();el.remove();};el.appendChild(b);}
   $('toasts').appendChild(el);
-  setTimeout(()=>{el.style.opacity='0';el.style.transition='opacity .2s';setTimeout(()=>el.remove(),200);},ttl);
+  setTimeout(function(){el.style.opacity='0';setTimeout(function(){el.remove();},200);},ttl);
 }
 function openModal(title,bodyHTML,buttons){
   $('modalTitle').textContent=title;$('modalBody').innerHTML=bodyHTML;$('modalFoot').innerHTML='';
-  buttons.forEach(b=>{const btn=document.createElement('button');btn.className='btn '+(b.class||'light');btn.textContent=b.label;btn.onclick=()=>{if(b.onClick)b.onClick();};$('modalFoot').appendChild(btn);});
+  buttons.forEach(function(b){
+    var btn=document.createElement('button');btn.className='btn '+(b.class||'light');btn.textContent=b.label;
+    btn.onclick=function(){if(b.onClick)b.onClick();};
+    $('modalFoot').appendChild(btn);
+  });
   $('modalBg').classList.add('open');
 }
 function closeModal(){$('modalBg').classList.remove('open');}
-function confirmDialog(title,message,onYes,yesLabel='Confirm',danger=true){
-  openModal(title,`<p style="margin:0">${message}</p>`,[
+function confirmDialog(title,message,onYes,yesLabel,danger){
+  openModal(title,'<p style="margin:0">'+message+'</p>',[
     {label:'Cancel',class:'light',onClick:closeModal},
-    {label:yesLabel,class:danger?'red':'',onClick:()=>{closeModal();onYes();}}
+    {label:yesLabel||'Confirm',class:danger===false?'':'red',onClick:function(){closeModal();onYes();}}
   ]);
 }
-const KEY='serbiz_v3';const ARCHIVE_KEY='serbiz_archives_v3';const SETTINGS_KEY='serbiz_settings_v3';
-let entries=[];let archives={};let settings={theme:'system',pin:null,favorites:[],recent:[]};
+
+var KEY='serbiz_v3';var ARCHIVE_KEY='serbiz_archives_v3';var SETTINGS_KEY='serbiz_settings_v3';
+var entries=[];var archives={};var settings={theme:'system',pin:null};
 function loadState(){
   try{
-    const raw=localStorage.getItem(KEY);
-    if(raw){const p=JSON.parse(raw);if(Array.isArray(p.entries))entries=p.entries;else if(Array.isArray(p))entries=p;}
+    var raw=localStorage.getItem(KEY);
+    if(raw){var p=JSON.parse(raw);if(Array.isArray(p.entries))entries=p.entries;else if(Array.isArray(p))entries=p;}
     archives=JSON.parse(localStorage.getItem(ARCHIVE_KEY)||'{}');
     settings=Object.assign(settings,JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}'));
   }catch(e){console.error(e);}
 }
 function saveState(){
-  localStorage.setItem(KEY,JSON.stringify({version:3,entries}));
+  localStorage.setItem(KEY,JSON.stringify({version:3,entries:entries}));
   localStorage.setItem(ARCHIVE_KEY,JSON.stringify(archives));
   localStorage.setItem(SETTINGS_KEY,JSON.stringify(settings));
 }
-const DEFAULT_TYPES={'cash':'asset','accounts receivable':'asset','supplies':'asset','prepaid':'asset','equipment':'asset','accumulated depreciation':'asset','accounts payable':'liability','unearned revenue':'liability','notes payable':'liability','owner, capital':'equity','owner, drawing':'equity','service revenue':'revenue','interest income':'revenue','rent expense':'expense','salaries expense':'expense','utilities expense':'expense','supplies expense':'expense','insurance expense':'expense','advertising expense':'expense','repairs and maintenance expense':'expense','depreciation expense':'expense','income tax expense':'expense','income summary':'equity','bad debt expense':'expense','allowance for doubtful accounts':'asset'};
-const DEFAULT_NORMAL={asset:'debit',expense:'debit',liability:'credit',equity:'credit',revenue:'credit'};
-function accountType(name){const n=(name||'').trim().toLowerCase();const reg=(settings.accounts||{})[n];if(reg&&reg.type)return reg.type;if(DEFAULT_TYPES[n])return DEFAULT_TYPES[n];if(/receivable|prepaid|cash|supplies|equipment|accumulated/i.test(n))return'asset';if(/payable|unearned|notes/i.test(n))return'liability';if(/capital|drawing/i.test(n))return'equity';if(/revenue|income/i.test(n)&&!/expense|tax/i.test(n))return'revenue';if(/expense|cost of/i.test(n))return'expense';return'asset';}
-function accountNormal(name){const n=(name||'').trim().toLowerCase();const reg=(settings.accounts||{})[n];if(reg&&reg.normal)return reg.normal;return DEFAULT_NORMAL[accountType(n)]||'debit';}
-function accountDisplayName(name){const reg=(settings.accounts||{})[(name||'').trim().toLowerCase()];return reg&&reg.name?reg.name:name;}
-function classify(desc,amount,type=''){
-  const d=desc.toLowerCase(),n=+amount;let a,b,note;
+var DEFAULT_TYPES={'cash':'asset','accounts receivable':'asset','supplies':'asset','prepaid':'asset','equipment':'asset','accumulated depreciation':'asset','accounts payable':'liability','unearned revenue':'liability','notes payable':'liability','owner, capital':'equity','owner, drawing':'equity','service revenue':'revenue','interest income':'revenue','rent expense':'expense','salaries expense':'expense','utilities expense':'expense','supplies expense':'expense','insurance expense':'expense','advertising expense':'expense','repairs and maintenance expense':'expense','depreciation expense':'expense','income tax expense':'expense','income summary':'equity','bad debt expense':'expense','allowance for doubtful accounts':'asset'};
+var DEFAULT_NORMAL={asset:'debit',expense:'debit',liability:'credit',equity:'credit',revenue:'credit'};
+function accountType(name){var n=(name||'').trim().toLowerCase();var reg=(settings.accounts||{})[n];if(reg&&reg.type)return reg.type;if(DEFAULT_TYPES[n])return DEFAULT_TYPES[n];if(/receivable|prepaid|cash|supplies|equipment|accumulated/i.test(n))return'asset';if(/payable|unearned|notes/i.test(n))return'liability';if(/capital|drawing/i.test(n))return'equity';if(/revenue|income/i.test(n)&&!/expense|tax/i.test(n))return'revenue';if(/expense|cost of/i.test(n))return'expense';return'asset';}
+function accountNormal(name){var n=(name||'').trim().toLowerCase();var reg=(settings.accounts||{})[n];if(reg&&reg.normal)return reg.normal;return DEFAULT_NORMAL[accountType(n)]||'debit';}
+function accountDisplayName(name){var reg=(settings.accounts||{})[(name||'').trim().toLowerCase()];return reg&&reg.name?reg.name:name;}
+function classify(desc,amount,type){
+  type=type||'';
+  var d=desc.toLowerCase(),n=+amount;var a,b,note;
   if(type==='investment'||/owner.*invest|invested.*capital|capital contribution/.test(d)){a='Cash';b='Owner, Capital';note='Owner investment';}
   else if(type==='withdrawal'||/owner.*withdraw|personal use|drawing/.test(d)){a='Owner, Drawing';b='Cash';note='Owner withdrawal';}
   else if(type==='service'||/cash.*service|service.*cash|received.*service|cash revenue|service revenue/.test(d)){a='Cash';b='Service Revenue';note='Cash service revenue';}
-  else if(type==='creditservice'||/rendered.*on account|service.*on account|billed.*client|earned.*on account/.test(d)){a='Accounts Receivable';b='Service Revenue';note='Service revenue on account';}
+  else if(type==='creditservice'||/rendered.*on account|service.*on account|billed.*client|earned.*on account/.test(d)){a='Accounts Receivable';b='Service Revenue';note='Service on account';}
   else if(type==='collection'||/collected.*receivable|collection from|received.*customer.*account/.test(d)){a='Cash';b='Accounts Receivable';note='Collection';}
   else if(type==='payment'||/paid.*accounts payable|paid.*supplier|payment.*supplier/.test(d)){a='Accounts Payable';b='Cash';note='Payment to supplier';}
   else if(type==='equipment'||/equipment|computer|furniture|office machine/.test(d)){a='Equipment';b='Cash';note='Equipment purchase';}
   else if(type==='payable'||/incurred.*unpaid|on account|payable/.test(d)){a=/utilit|electric|water|internet/.test(d)?'Utilities Expense':/salary|wage/.test(d)?'Salaries Expense':/suppl/.test(d)?'Supplies Expense':'Rent Expense';b='Accounts Payable';note='Expense on account';}
   else if(type==='expense'||/rent|salary|salaries|wage|utilities|electric|water bill|internet|suppl|advertis|insurance|repair|maintenance/.test(d)){a=/salary|wage/.test(d)?'Salaries Expense':/utilit|electric|water bill|internet/.test(d)?'Utilities Expense':/suppl/.test(d)?'Supplies Expense':/insurance/.test(d)?'Insurance Expense':/advertis/.test(d)?'Advertising Expense':/repair|maintenance/.test(d)?'Repairs and Maintenance Expense':'Rent Expense';b='Cash';note='Cash expense';}
-  else{a='Cash';b='Service Revenue';note='Uncertain';}
-  return{desc,amount:n,note,approved:true,lines:[{account:a,debit:n,credit:0},{account:b,debit:0,credit:n}]};
+  else{a='Cash';b='Service Revenue';note='Verify';}
+  return{desc:desc,amount:n,note:note,approved:true,lines:[{account:a,debit:n,credit:0},{account:b,debit:0,credit:n}]};
 }
-let pending=[];
-function addPending(date,desc,amt,type){if(!date||!desc||!Number.isFinite(+amt)||+amt<=0)throw Error('Provide valid date, description, positive amount.');const t=classify(desc,+amt,type);t.date=date;t.id=uid();pending.push(t);drawReview();}
-function duplicateOf(t){const key=`${t.date}|${(t.desc||'').trim().toLowerCase()}|${t.amount}`;return entries.some(e=>{const amt=e.lines.reduce((s,l)=>s+l.debit,0);return `${e.date}|${(e.desc||'').trim().toLowerCase()}|${amt}`===key;});}
+var pending=[];
+function addPending(date,desc,amt,type){if(!date||!desc||!isFinite(+amt)||+amt<=0)throw new Error('Provide date, description, positive amount.');var t=classify(desc,+amt,type);t.date=date;t.id=uid();pending.push(t);drawReview();}
+function duplicateOf(t){var key=t.date+'|'+t.desc.trim().toLowerCase()+'|'+t.amount;return entries.some(function(e){var amt=e.lines.reduce(function(s,l){return s+l.debit;},0);return (e.date+'|'+(e.desc||'').trim().toLowerCase()+'|'+amt)===key;});}
 function drawReview(){
-  $('review').classList.toggle('hidden',!pending.length);if(!pending.length)return;
-  $('reviewRows').innerHTML=pending.map((t,i)=>{
-    const dup=duplicateOf(t);
-    return `<div class="card" style="margin:10px 0"><div class="row row-between"><b>${i+1}. ${esc(t.desc)}</b><label class="small"><input type="checkbox" style="width:auto" ${t.approved?'checked':''} onchange="pending[${i}].approved=this.checked"> Approve</label></div><small class="muted">${esc(t.date)} · ${fmt(t.amount)} · ${esc(t.note)}${dup?' · <span style="color:var(--red)">⚠ Possible duplicate</span>':''}</small><div class="table-wrap"><table style="margin-top:8px"><thead><tr><th>Account</th><th class="num">Debit</th><th class="num">Credit</th></tr></thead><tbody>${t.lines.map((l,j)=>`<tr><td><input value="${esc(l.account)}" onchange="pending[${i}].lines[${j}].account=this.value"></td><td><input type="number" min="0" step=".01" class="num" value="${l.debit||''}" onchange="pending[${i}].lines[${j}].debit=+this.value||0"></td><td><input type="number" min="0" step=".01" class="num" value="${l.credit||''}" onchange="pending[${i}].lines[${j}].credit=+this.value||0"></td></tr>`).join('')}</tbody></table></div></div>`;
+  $('review').classList.toggle('hidden',!pending.length);
+  if(!pending.length)return;
+  $('reviewRows').innerHTML=pending.map(function(t,i){
+    var dup=duplicateOf(t);
+    return '<div class="card" style="margin:10px 0"><div class="row row-between"><b>'+(i+1)+'. '+esc(t.desc)+'</b><label class="small"><input type="checkbox" style="width:auto" '+(t.approved?'checked':'')+' onchange="pending['+i+'].approved=this.checked"> Approve</label></div><small class="muted">'+esc(t.date)+' · '+fmt(t.amount)+' · '+esc(t.note)+(dup?' · <span style="color:var(--red)">⚠ Duplicate</span>':'')+'</small><div class="table-wrap"><table style="margin-top:8px"><thead><tr><th>Account</th><th class="num">Dr</th><th class="num">Cr</th></tr></thead><tbody>'+t.lines.map(function(l,j){return '<tr><td><input value="'+esc(l.account)+'" onchange="pending['+i+'].lines['+j+'].account=this.value"></td><td><input type="number" min="0" step=".01" class="num" value="'+(l.debit||'')+'" onchange="pending['+i+'].lines['+j+'].debit=+this.value||0"></td><td><input type="number" min="0" step=".01" class="num" value="'+(l.credit||'')+'" onchange="pending['+i+'].lines['+j+'].credit=+this.value||0"></td></tr>';}).join('')+'</tbody></table></div></div>';
   }).join('');
 }
 function post(){
-  const chosen=pending.filter(t=>t.approved);if(!chosen.length)return toast('Approve at least one.','err');
-  for(const t of chosen){const d=t.lines.reduce((s,l)=>s+(+l.debit||0),0),c=t.lines.reduce((s,l)=>s+(+l.credit||0),0);if(t.lines.length<2||t.lines.some(l=>!l.account||(+l.debit>0&&+l.credit>0)||+l.debit<0||+l.credit<0)||d<=0||Math.abs(d-c)>.005)return toast('Entry incomplete or unbalanced.','err');}
-  const posted=[];
-  chosen.forEach(t=>{
-    const e={id:uid(),date:t.date,desc:t.desc,lines:t.lines.map(l=>({account:l.account.trim(),debit:+l.debit||0,credit:+l.credit||0})),kind:t.kind||undefined};
+  var chosen=pending.filter(function(t){return t.approved;});
+  if(!chosen.length){toast('Approve at least one.','err');return;}
+  for(var i=0;i<chosen.length;i++){
+    var t=chosen[i];
+    var d=t.lines.reduce(function(s,l){return s+(+l.debit||0);},0);
+    var c=t.lines.reduce(function(s,l){return s+(+l.credit||0);},0);
+    if(t.lines.length<2||t.lines.some(function(l){return !l.account||(+l.debit>0&&+l.credit>0)||+l.debit<0||+l.credit<0;})||d<=0||Math.abs(d-c)>.005){toast('Entry incomplete or unbalanced.','err');return;}
+  }
+  var posted=[];
+  chosen.forEach(function(t){
+    var e={id:uid(),date:t.date,desc:t.desc,lines:t.lines.map(function(l){return{account:l.account.trim(),debit:+l.debit||0,credit:+l.credit||0};}),kind:t.kind||undefined};
     entries.push(e);posted.push(e);
-    if(t.reverse){const revId=uid();const revEntry={id:revId,date:t.reversalDate||nextPeriodFirstDay(t.date),desc:'Reversing: '+t.desc,lines:e.lines.map(l=>({account:l.account,debit:l.credit,credit:l.debit})),kind:'reversing',reversesId:e.id};entries.push(revEntry);posted.push(revEntry);e.reversedById=revId;}
+    if(t.reverse){
+      var revId=uid();
+      var revEntry={id:revId,date:t.reversalDate||nextPeriodFirstDay(t.date),desc:'Reversing: '+t.desc,lines:e.lines.map(function(l){return{account:l.account,debit:l.credit,credit:l.debit};}),kind:'reversing',reversesId:e.id};
+      entries.push(revEntry);posted.push(revEntry);e.reversedById=revId;
+    }
   });
   pending=[];saveState();drawReview();render();
-  toast(`${posted.length} transaction(s) posted.`,'ok','Undo',()=>{entries=entries.filter(e=>!posted.includes(e));saveState();render();toast('Undone.','ok');},8000);
+  toast(posted.length+' posted.','ok','Undo',function(){entries=entries.filter(function(e){return posted.indexOf(e)===-1;});saveState();render();toast('Undone.','ok');},8000);
 }
-function balances(list){const m={};list.forEach(e=>e.lines.forEach(l=>{if(!m[l.account])m[l.account]={dr:0,cr:0};m[l.account].dr+=l.debit;m[l.account].cr+=l.credit;}));return m;}
-function net(m,n){return(m[n]?.dr||0)-(m[n]?.cr||0);}
-let journalPage=0;const JOURNAL_PER_PAGE=15;
+function balances(list){var m={};list.forEach(function(e){e.lines.forEach(function(l){if(!m[l.account])m[l.account]={dr:0,cr:0};m[l.account].dr+=l.debit;m[l.account].cr+=l.credit;});});return m;}
+function net(m,n){return(m[n]?m[n].dr:0)-(m[n]?m[n].cr:0);}
+var journalPage=0;var JOURNAL_PER_PAGE=15;
 function renderJournal(){
-  const q=($('jSearch').value||'').toLowerCase().trim();
-  const all=entries.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-  const filtered=q?all.filter(e=>(e.desc||'').toLowerCase().includes(q)||e.lines.some(l=>l.account.toLowerCase().includes(q))):all;
-  const pages=Math.max(1,Math.ceil(filtered.length/JOURNAL_PER_PAGE));
+  var q=($('jSearch').value||'').toLowerCase().trim();
+  var all=entries.slice().sort(function(a,b){return (b.date||'').localeCompare(a.date||'');});
+  var filtered=q?all.filter(function(e){return (e.desc||'').toLowerCase().indexOf(q)>=0||e.lines.some(function(l){return l.account.toLowerCase().indexOf(q)>=0;});}):all;
+  var pages=Math.max(1,Math.ceil(filtered.length/JOURNAL_PER_PAGE));
   if(journalPage>=pages)journalPage=pages-1;
-  const slice=filtered.slice(journalPage*JOURNAL_PER_PAGE,(journalPage+1)*JOURNAL_PER_PAGE);
-  if(!filtered.length){$('journalRows').innerHTML=`<div class="empty card"><h4>${q?'No matches':'No journal entries'}</h4><p>${q?'Try a different search.':'Posted transactions will appear here.'}</p></div>`;$('journalPager').innerHTML='';return;}
-  $('journalRows').innerHTML=slice.map(e=>{
-    const total=e.lines.reduce((s,l)=>s+l.debit,0);
-    return `<div class="card" data-entry-id="${e.id}" style="padding:14px 18px"><div class="row row-between" style="margin-bottom:8px"><div><b>${esc(e.desc)}</b>${e.kind==='adjusting'?'<span class="kind-badge adjusting">Adjusting</span>':''}${e.kind==='closing'?'<span class="kind-badge closing">Closing</span>':''}${e.kind==='reversing'?'<span class="kind-badge reversing">Reversing</span>':''}<div class="muted small">${fmtDate(e.date)} · ${fmt(total)}</div></div>${e.kind==='closing'?'':`<div class="row" style="gap:4px"><button class="btn light sm" onclick="editEntry('${e.id}')">Edit</button><button class="btn light sm" onclick="voidEntry('${e.id}')">Void</button><button class="btn red sm" onclick="deleteEntry('${e.id}')">Delete</button></div>`}</div><div class="table-wrap"><table><thead><tr><th>Account</th><th class="num">Debit</th><th class="num">Credit</th></tr></thead><tbody>${e.lines.map(l=>`<tr><td>${esc(l.account)}</td><td class="num dr">${l.debit?fmt(l.debit):''}</td><td class="num cr">${l.credit?fmt(l.credit):''}</td></tr>`).join('')}</tbody></table></div></div>`;
+  var slice=filtered.slice(journalPage*JOURNAL_PER_PAGE,(journalPage+1)*JOURNAL_PER_PAGE);
+  if(!filtered.length){$('journalRows').innerHTML='<div class="empty card"><h4>'+(q?'No matches':'No journal entries')+'</h4><p>'+(q?'Try different search.':'Posted entries will appear here.')+'</p></div>';$('journalPager').innerHTML='';return;}
+  $('journalRows').innerHTML=slice.map(function(e){
+    var total=e.lines.reduce(function(s,l){return s+l.debit;},0);
+    var badges=(e.kind==='adjusting'?'<span class="kind-badge adjusting">Adj</span>':'')+(e.kind==='closing'?'<span class="kind-badge closing">Close</span>':'')+(e.kind==='reversing'?'<span class="kind-badge reversing">Rev</span>':'');
+    var actions=e.kind==='closing'?'':'<div class="row" style="gap:4px"><button class="btn light sm" onclick="editEntry(\''+e.id+'\')">Edit</button><button class="btn light sm" onclick="voidEntry(\''+e.id+'\')">Void</button><button class="btn red sm" onclick="deleteEntry(\''+e.id+'\')">Del</button></div>';
+    return '<div class="card" data-entry-id="'+e.id+'" style="padding:14px 18px"><div class="row row-between" style="margin-bottom:8px"><div><b>'+esc(e.desc)+'</b>'+badges+'<div class="muted small">'+fmtDate(e.date)+' · '+fmt(total)+'</div></div>'+actions+'</div><div class="table-wrap"><table><thead><tr><th>Account</th><th class="num">Dr</th><th class="num">Cr</th></tr></thead><tbody>'+e.lines.map(function(l){return '<tr><td>'+esc(l.account)+'</td><td class="num dr">'+(l.debit?fmt(l.debit):'')+'</td><td class="num cr">'+(l.credit?fmt(l.credit):'')+'</td></tr>';}).join('')+'</tbody></table></div></div>';
   }).join('');
-  $('journalPager').innerHTML=pages>1?`<button class="btn light sm" ${journalPage===0?'disabled':''} onclick="journalPage--;renderJournal()">← Prev</button><span class="small muted">Page ${journalPage+1} of ${pages}</span><button class="btn light sm" ${journalPage>=pages-1?'disabled':''} onclick="journalPage++;renderJournal()">Next →</button>`:'';
+  $('journalPager').innerHTML=pages>1?'<button class="btn light sm" '+(journalPage===0?'disabled':'')+' onclick="journalPage--;renderJournal()">← Prev</button><span class="small muted" style="padding:0 10px">Page '+(journalPage+1)+' of '+pages+'</span><button class="btn light sm" '+(journalPage>=pages-1?'disabled':'')+' onclick="journalPage++;renderJournal()">Next →</button>':'';
 }
 function editEntry(id){
-  const e=entries.find(x=>x.id===id);if(!e)return;
-  const body=`<div class="field"><label>Date</label><input id="editDate" type="date" value="${esc(e.date)}"></div><div class="field"><label>Description</label><input id="editDesc" value="${esc(e.desc)}"></div><div class="table-wrap"><table><thead><tr><th>Account</th><th class="num">Debit</th><th class="num">Credit</th></tr></thead><tbody>${e.lines.map((l,i)=>`<tr><td><input id="editAcc${i}" value="${esc(l.account)}"></td><td><input id="editDr${i}" type="number" min="0" step=".01" value="${l.debit||''}"></td><td><input id="editCr${i}" type="number" min="0" step=".01" value="${l.credit||''}"></td></tr>`).join('')}</tbody></table></div>`;
-  openModal('Edit entry',body,[{label:'Cancel',class:'light',onClick:closeModal},{label:'Save',onClick:()=>{
-    const date=$('editDate').value,desc=$('editDesc').value.trim();if(!date||!desc)return toast('Date and description required.','err');
-    const lines=e.lines.map((_,i)=>({account:$('editAcc'+i).value.trim(),debit:+$('editDr'+i).value||0,credit:+$('editCr'+i).value||0}));
-    const d=lines.reduce((s,l)=>s+l.debit,0),c=lines.reduce((s,l)=>s+l.credit,0);
-    if(lines.some(l=>!l.account)||Math.abs(d-c)>.005||d<=0)return toast('Entry must be balanced.','err');
-    Object.assign(e,{date,desc,lines});saveState();render();closeModal();toast('Entry updated.','ok');
+  var e=entries.find(function(x){return x.id===id;});if(!e)return;
+  var body='<div class="field"><label>Date</label><input id="editDate" type="date" value="'+esc(e.date)+'"></div><div class="field"><label>Description</label><input id="editDesc" value="'+esc(e.desc)+'"></div><div class="table-wrap"><table><thead><tr><th>Account</th><th class="num">Dr</th><th class="num">Cr</th></tr></thead><tbody>'+e.lines.map(function(l,i){return '<tr><td><input id="editAcc'+i+'" value="'+esc(l.account)+'"></td><td><input id="editDr'+i+'" type="number" min="0" step=".01" value="'+(l.debit||'')+'"></td><td><input id="editCr'+i+'" type="number" min="0" step=".01" value="'+(l.credit||'')+'"></td></tr>';}).join('')+'</tbody></table></div>';
+  openModal('Edit entry',body,[{label:'Cancel',class:'light',onClick:closeModal},{label:'Save',onClick:function(){
+    var date=$('editDate').value,desc=$('editDesc').value.trim();
+    if(!date||!desc){toast('Date and description required.','err');return;}
+    var lines=e.lines.map(function(_,i){return{account:$('editAcc'+i).value.trim(),debit:+$('editDr'+i).value||0,credit:+$('editCr'+i).value||0};});
+    var d=lines.reduce(function(s,l){return s+l.debit;},0);
+    var c=lines.reduce(function(s,l){return s+l.credit;},0);
+    if(lines.some(function(l){return !l.account;})||Math.abs(d-c)>.005||d<=0){toast('Entry must be balanced.','err');return;}
+    e.date=date;e.desc=desc;e.lines=lines;
+    saveState();render();closeModal();toast('Updated.','ok');
   }}]);
 }
-function voidEntry2(id){const e=entries.find(x=>x.id===id);if(!e)return;confirmDialog('Void this entry?','A reversing entry will be added today.','',()=>{
-  const rev={id:uid(),date:today,desc:'VOID: '+e.desc,lines:e.lines.map(l=>({account:l.account,debit:l.credit,credit:l.debit}))};
-  entries.push(rev);saveState();render();toast('Void posted.','ok','Undo',()=>{entries=entries.filter(x=>x.id!==rev.id);saveState();render();},8000);
-},'Void');}
-function deleteEntry(id){const e=entries.find(x=>x.id===id);if(!e)return;const idx=entries.indexOf(e);confirmDialog('Delete entry?',`"${esc(e.desc)}" will be removed.`,()=>{entries.splice(idx,1);saveState();render();toast('Deleted.','ok','Undo',()=>{entries.splice(idx,0,e);saveState();render();},8000);},'Delete');}
+function voidEntry(id){
+  var e=entries.find(function(x){return x.id===id;});if(!e)return;
+  confirmDialog('Void this entry?','A reversing entry will be added today. Original stays.','',function(){
+    var rev={id:uid(),date:today,desc:'VOID: '+e.desc,lines:e.lines.map(function(l){return{account:l.account,debit:l.credit,credit:l.debit};})};
+    entries.push(rev);saveState();render();toast('Void posted.','ok','Undo',function(){entries=entries.filter(function(x){return x.id!==rev.id;});saveState();render();},8000);
+  },'Void');
+}
+function deleteEntry(id){
+  var e=entries.find(function(x){return x.id===id;});if(!e)return;
+  var idx=entries.indexOf(e);
+  confirmDialog('Delete entry?','"'+esc(e.desc)+'" will be removed.',function(){
+    entries.splice(idx,1);saveState();render();toast('Deleted.','ok','Undo',function(){entries.splice(idx,0,e);saveState();render();},8000);
+  },'Delete');
+}
 function trial(){
-  const asOf=$('tbAsOf').value||today;const mode=settings.tbMode||'adjusted';
-  let filtered=entries.filter(e=>(e.date||'')<=asOf);
-  if(mode==='unadjusted')filtered=filtered.filter(e=>e.kind!=='adjusting'&&e.kind!=='closing'&&e.kind!=='reversing');
-  else if(mode==='adjusted')filtered=filtered.filter(e=>e.kind!=='closing');
-  const m=balances(filtered);const names=Object.keys(m).sort();let d=0,c=0;
-  const modeLabel={unadjusted:'Unadjusted',adjusted:'Adjusted',post-closing:'Post-closing'}[mode];
+  var asOf=$('tbAsOf').value||today;var mode=settings.tbMode||'adjusted';
+  var filtered=entries.filter(function(e){return (e.date||'')<=asOf;});
+  if(mode==='unadjusted')filtered=filtered.filter(function(e){return e.kind!=='adjusting'&&e.kind!=='closing'&&e.kind!=='reversing';});
+  else if(mode==='adjusted')filtered=filtered.filter(function(e){return e.kind!=='closing';});
+  var m=balances(filtered);var names=Object.keys(m).sort();var d=0,c=0;
+  var modeLabel={unadjusted:'Unadjusted',adjusted:'Adjusted','post-closing':'Post-closing'}[mode];
   $('tbDate').textContent='As of '+fmtDate(asOf)+' · '+modeLabel;
-  document.querySelectorAll('#tbModeToggle button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
-  const hint=$('tbModeHint');
-  if(hint)hint.textContent=mode==='unadjusted'?'Regular entries only.':mode==='post-closing'?'Includes closing entries.':'Includes adjusting and reversing entries. Closing excluded.';
-  if(!names.length){$('tb').innerHTML='<div class="empty">No balances as of this date.</div>';$('tbStatus').textContent='No posted balances.';$('tbStatus').className='notice';return;}
-  const rows=names.map(n=>{const v=net(m,n),dr=Math.max(v,0),cr=Math.max(-v,0);d+=dr;c+=cr;return `<tr><td>${esc(accountDisplayName(n))} <span class="acct-chip ${accountType(n)}">${accountType(n)}</span></td><td class="num dr">${dr?fmt(dr):'—'}</td><td class="num cr">${cr?fmt(cr):'—'}</td></tr>`;}).join('');
-  $('tb').innerHTML=`<table><thead><tr><th>Account</th><th class="num">Debit</th><th class="num">Credit</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><th>TOTAL</th><th class="num">${fmt(d)}</th><th class="num">${fmt(c)}</th></tr></tfoot></table>`;
-  const inBalance=Math.abs(d-c)<0.005;
+  document.querySelectorAll('#tbModeToggle button').forEach(function(b){b.classList.toggle('active',b.dataset.mode===mode);});
+  if(!names.length){$('tb').innerHTML='<div class="empty">No balances.</div>';$('tbStatus').textContent='No data.';$('tbStatus').className='notice';return;}
+  var rows=names.map(function(n){
+    var v=net(m,n),dr=Math.max(v,0),cr=Math.max(-v,0);d+=dr;c+=cr;
+    return '<tr><td>'+esc(accountDisplayName(n))+' <span class="acct-chip '+accountType(n)+'">'+accountType(n)+'</span></td><td class="num dr">'+(dr?fmt(dr):'—')+'</td><td class="num cr">'+(cr?fmt(cr):'—')+'</td></tr>';
+  }).join('');
+  $('tb').innerHTML='<table><thead><tr><th>Account</th><th class="num">Dr</th><th class="num">Cr</th></tr></thead><tbody>'+rows+'</tbody><tfoot><tr><th>TOTAL</th><th class="num">'+fmt(d)+'</th><th class="num">'+fmt(c)+'</th></tr></tfoot></table>';
+  var inBalance=Math.abs(d-c)<0.005;
   $('tbStatus').className='notice '+(inBalance?'':'danger');
-  $('tbStatus').textContent=inBalance?'✓ Trial balance is in balance.':'⚠ Out of balance by '+fmt(d-c)+'.';
+  $('tbStatus').textContent=inBalance?'✓ Trial balance in balance.':'⚠ Out of balance by '+fmt(d-c)+'.';
 }
 function setTbMode(mode){settings.tbMode=mode;saveState();trial();}
-function ledgerOptions(){const s=$('ledgerSelect');const old=s.value;const names=[...new Set(entries.flatMap(e=>e.lines.map(l=>l.account)))].sort();s.innerHTML='<option value="">Choose an account…</option>'+names.map(x=>`<option value="${esc(x)}"${x===old?' selected':''}>${esc(accountDisplayName(x))}</option>`).join('');drawLedger();}
+function ledgerOptions(){
+  var s=$('ledgerSelect');var old=s.value;
+  var names=[];entries.forEach(function(e){e.lines.forEach(function(l){if(names.indexOf(l.account)===-1)names.push(l.account);});});
+  names.sort();
+  s.innerHTML='<option value="">Choose…</option>'+names.map(function(x){return '<option value="'+esc(x)+'"'+(x===old?' selected':'')+'>'+esc(accountDisplayName(x))+'</option>';}).join('');
+  drawLedger();
+}
 function drawLedger(){
-  const a=$('ledgerSelect').value;if(!a){$('ledgerRows').innerHTML='<div class="empty card">Choose an account.</div>';return;}
-  let run=0;const rows=[];
-  entries.slice().sort((a,b)=>(a.date||'').localeCompare(b.date||'')).forEach(e=>e.lines.filter(l=>l.account===a).forEach(l=>{run+=l.debit-l.credit;rows.push(`<tr><td>${fmtDate(e.date)}</td><td>${esc(e.desc)}</td><td class="num dr">${l.debit?fmt(l.debit):'—'}</td><td class="num cr">${l.credit?fmt(l.credit):'—'}</td><td class="num">${Math.abs(run)<0.005?'—':fmt(Math.abs(run))+(run>0?' Dr':' Cr')}</td></tr>`);}));
-  $('ledgerRows').innerHTML=rows.length?`<div class="card" style="padding:0"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Particulars</th><th class="num">Debit</th><th class="num">Credit</th><th class="num">Balance</th></tr></thead><tbody>${rows.join('')}</tbody></table></div></div>`:`<div class="empty card">No postings.</div>`;
+  var a=$('ledgerSelect').value;
+  if(!a){$('ledgerRows').innerHTML='<div class="empty card">Choose an account.</div>';return;}
+  var run=0;var rows=[];
+  entries.slice().sort(function(a,b){return (a.date||'').localeCompare(b.date||'');}).forEach(function(e){
+    e.lines.filter(function(l){return l.account===a;}).forEach(function(l){
+      run+=l.debit-l.credit;
+      rows.push('<tr><td>'+fmtDate(e.date)+'</td><td>'+esc(e.desc)+'</td><td class="num dr">'+(l.debit?fmt(l.debit):'—')+'</td><td class="num cr">'+(l.credit?fmt(l.credit):'—')+'</td><td class="num">'+(Math.abs(run)<0.005?'—':fmt(Math.abs(run))+(run>0?' Dr':' Cr'))+'</td></tr>');
+    });
+  });
+  $('ledgerRows').innerHTML=rows.length?'<div class="card" style="padding:0"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Particulars</th><th class="num">Dr</th><th class="num">Cr</th><th class="num">Balance</th></tr></thead><tbody>'+rows.join('')+'</tbody></table></div></div>':'<div class="empty card">No postings.</div>';
 }
 function statements(){
-  const from=$('from').value,to=$('to').value;
-  if(!from||!to)return toast('Choose a period.','err');
-  if(from>to)return toast('"From" must come before "To".','err');
-  const period=entries.filter(e=>(e.date||'')>=from&&(e.date||'')<=to&&e.kind!=='closing');
-  const m=balances(period);const names=Object.keys(m);const amt=n=>net(m,n);const byType=t=>names.filter(n=>accountType(n)===t);
-  const revenue=byType('revenue').reduce((s,n)=>s-amt(n),0);
-  const expenses=byType('expense').reduce((s,n)=>s+amt(n),0);
-  const income=revenue-expenses;
-  const assetTotal=byType('asset').reduce((s,n)=>s-amt(n),0);
-  const liability=byType('liability').reduce((s,n)=>s-amt(n),0);
-  const capNet=byType('equity').filter(n=>/capital/i.test(n)).reduce((s,n)=>s-amt(n),0);
-  const draws=byType('equity').filter(n=>/drawing/i.test(n)).reduce((s,n)=>s+amt(n),0);
-  const equity=capNet+income-draws;
-  const cashStart=-net(balances(entries.filter(e=>(e.date||'')<from&&e.kind!=='closing')),'Cash');
-  const cashEnd=-net(balances(entries.filter(e=>(e.date||'')<=to&&e.kind!=='closing')),'Cash');
-  const cashChange=cashEnd-cashStart;
-  function table(title,sub,body,totalLabel,total){return `<div class="card"><div style="text-align:center;font-family:var(--font-display);font-size:19px;font-weight:700">${title}</div><div class="muted small" style="text-align:center;margin-bottom:14px">${sub}</div><table><tbody>${body}<tr><th>${totalLabel}</th><th class="num">${fmt(total)}</th></tr></tbody></table></div>`;}
-  const incomeBody=byType('revenue').map(n=>`<tr><td>${esc(accountDisplayName(n))}</td><td class="num">${fmt(-amt(n))}</td></tr>`).join('')+`<tr><th>Total revenues</th><th class="num">${fmt(revenue)}</th></tr>`+byType('expense').map(n=>`<tr><td>${esc(accountDisplayName(n))}</td><td class="num">${fmt(amt(n))}</td></tr>`).join('')+`<tr><th>Total expenses</th><th class="num">${fmt(expenses)}</th></tr>`;
-  const eqBody=`<tr><td>Beginning capital</td><td class="num">${fmt(0)}</td></tr><tr><td>Additional investment</td><td class="num">${fmt(capNet)}</td></tr><tr><td>Net income (loss)</td><td class="num">${fmt(income)}</td></tr><tr><td>Less: Drawings</td><td class="num">(${fmt(draws)})</td></tr>`;
-  const bsBody='<tr><th colspan="2">ASSETS</th></tr>'+byType('asset').map(n=>`<tr><td>${esc(accountDisplayName(n))}</td><td class="num">${fmt(-amt(n))}</td></tr>`).join('')+`<tr><th>Total assets</th><th class="num">${fmt(assetTotal)}</th></tr><tr><th colspan="2">LIABILITIES</th></tr>`+byType('liability').map(n=>`<tr><td>${esc(accountDisplayName(n))}</td><td class="num">${fmt(-amt(n))}</td></tr>`).join('')+`<tr><th>Total liabilities</th><th class="num">${fmt(liability)}</th></tr><tr><th colspan="2">OWNER'S EQUITY</th></tr><tr><td>Owner's equity</td><td class="num">${fmt(equity)}</td></tr>`;
-  const cfBody=`<tr><td>Cash at beginning of period</td><td class="num">${fmt(cashStart)}</td></tr><tr><td>Net change in cash</td><td class="num">${fmt(cashChange)}</td></tr><tr><td colspan="2" class="muted small">(Derived from posted entries touching Cash.)</td></tr>`;
-  const balanced=Math.abs(assetTotal-(liability+equity))<0.01;
-  $('statementOutput').innerHTML=table('INCOME STATEMENT',`For ${fmtDate(from)} – ${fmtDate(to)}`,incomeBody,'NET INCOME (LOSS)',income)+table("STATEMENT OF OWNER'S EQUITY",`For ${fmtDate(from)} – ${fmtDate(to)}`,eqBody,"ENDING OWNER'S EQUITY",equity)+table('BALANCE SHEET',`As of ${fmtDate(to)}`,bsBody,'TOTAL LIABILITIES AND EQUITY',liability+equity)+table('STATEMENT OF CASH FLOWS',`For ${fmtDate(from)} – ${fmtDate(to)}`,cfBody,'ENDING CASH',cashEnd)+`<div class="notice ${balanced?'':'danger'}">${balanced?'✓ Balance sheet equation holds.':'⚠ Balance sheet does not balance.'} <span class="muted small">Reversing entries are dated in the next period.</span></div>`;
+  var from=$('from').value,to=$('to').value;
+  if(!from||!to){toast('Choose period.','err');return;}
+  if(from>to){toast('"From" must precede "To".','err');return;}
+  var period=entries.filter(function(e){return (e.date||'')>=from&&(e.date||'')<=to&&e.kind!=='closing';});
+  var m=balances(period);var names=Object.keys(m);var amt=function(n){return net(m,n);};var byType=function(t){return names.filter(function(n){return accountType(n)===t;});};
+  var revenue=byType('revenue').reduce(function(s,n){return s-amt(n);},0);
+  var expenses=byType('expense').reduce(function(s,n){return s+amt(n);},0);
+  var income=revenue-expenses;
+  var assetTotal=byType('asset').reduce(function(s,n){return s-amt(n);},0);
+  var liability=byType('liability').reduce(function(s,n){return s-amt(n);},0);
+  var capNet=byType('equity').filter(function(n){return /capital/i.test(n);}).reduce(function(s,n){return s-amt(n);},0);
+  var draws=byType('equity').filter(function(n){return /drawing/i.test(n);}).reduce(function(s,n){return s+amt(n);},0);
+  var equity=capNet+income-draws;
+  var cashStart=-net(balances(entries.filter(function(e){return (e.date||'')<from&&e.kind!=='closing';})),'Cash');
+  var cashEnd=-net(balances(entries.filter(function(e){return (e.date||'')<=to&&e.kind!=='closing';})),'Cash');
+  var cashChange=cashEnd-cashStart;
+  function table(title,sub,body,totalLabel,total){
+    return '<div class="card"><div style="text-align:center;font-family:var(--font-display);font-size:19px;font-weight:700">'+title+'</div><div class="muted small" style="text-align:center;margin-bottom:14px">'+sub+'</div><table><tbody>'+body+'<tr><th>'+totalLabel+'</th><th class="num">'+fmt(total)+'</th></tr></tbody></table></div>';
+  }
+  var incomeBody=byType('revenue').map(function(n){return '<tr><td>'+esc(accountDisplayName(n))+'</td><td class="num">'+fmt(-amt(n))+'</td></tr>';}).join('')+'<tr><th>Total revenues</th><th class="num">'+fmt(revenue)+'</th></tr>'+byType('expense').map(function(n){return '<tr><td>'+esc(accountDisplayName(n))+'</td><td class="num">'+fmt(amt(n))+'</td></tr>';}).join('')+'<tr><th>Total expenses</th><th class="num">'+fmt(expenses)+'</th></tr>';
+  var eqBody='<tr><td>Beginning capital</td><td class="num">'+fmt(0)+'</td></tr><tr><td>Additional investment</td><td class="num">'+fmt(capNet)+'</td></tr><tr><td>Net income (loss)</td><td class="num">'+fmt(income)+'</td></tr><tr><td>Less: Drawings</td><td class="num">('+fmt(draws)+')</td></tr>';
+  var bsBody='<tr><th colspan="2">ASSETS</th></tr>'+byType('asset').map(function(n){return '<tr><td>'+esc(accountDisplayName(n))+'</td><td class="num">'+fmt(-amt(n))+'</td></tr>';}).join('')+'<tr><th>Total assets</th><th class="num">'+fmt(assetTotal)+'</th></tr><tr><th colspan="2">LIABILITIES</th></tr>'+byType('liability').map(function(n){return '<tr><td>'+esc(accountDisplayName(n))+'</td><td class="num">'+fmt(-amt(n))+'</td></tr>';}).join('')+'<tr><th>Total liabilities</th><th class="num">'+fmt(liability)+'</th></tr><tr><th colspan="2">OWNER\'S EQUITY</th></tr><tr><td>Owner\'s equity</td><td class="num">'+fmt(equity)+'</td></tr>';
+  var cfBody='<tr><td>Cash beginning</td><td class="num">'+fmt(cashStart)+'</td></tr><tr><td>Net change</td><td class="num">'+fmt(cashChange)+'</td></tr>';
+  var balanced=Math.abs(assetTotal-(liability+equity))<0.01;
+  $('statementOutput').innerHTML=table('INCOME STATEMENT','For '+fmtDate(from)+' – '+fmtDate(to),incomeBody,'NET INCOME',income)+table("OWNER'S EQUITY",'For '+fmtDate(from)+' – '+fmtDate(to),eqBody,'ENDING EQUITY',equity)+table('BALANCE SHEET','As of '+fmtDate(to),bsBody,'TOTAL L + E',liability+equity)+table('CASH FLOWS','For '+fmtDate(from)+' – '+fmtDate(to),cfBody,'ENDING CASH',cashEnd)+'<div class="notice '+(balanced?'':'danger')+'">'+(balanced?'✓ Balance sheet equation holds.':'⚠ Balance sheet does not balance.')+'</div>';
 }
-function monthEntries(m){return entries.filter(e=>(e.date||'').slice(0,7)===m);}
-function snapshotReports(month,rows){const m=balances(rows);const names=Object.keys(m);const amt=n=>net(m,n);const byType=t=>names.filter(n=>accountType(n)===t);const revenue=byType('revenue').reduce((s,n)=>s-amt(n),0);const expenses=byType('expense').reduce((s,n)=>s+amt(n),0);const income=revenue-expenses;const assetTotal=byType('asset').reduce((s,n)=>s-amt(n),0);const liability=byType('liability').reduce((s,n)=>s-amt(n),0);const capNet=byType('equity').filter(n=>/capital/i.test(n)).reduce((s,n)=>s-amt(n),0);const draws=byType('equity').filter(n=>/drawing/i.test(n)).reduce((s,n)=>s+amt(n),0);const equity=capNet+income-draws;const tb=Object.fromEntries(names.map(n=>[n,{debit:Math.max(amt(n),0),credit:Math.max(-amt(n),0)}]));return{period:month,revenue,expenses,netIncome:income,totalAssets:assetTotal,totalLiabilities:liability,endingOwnersEquity:equity,totalLiabilitiesAndEquity:liability+equity,trialBalance:tb};}
-function saveMonthlyArchive(){const month=$('archiveMonth').value;if(!month)return toast('Choose a month.','err');const rows=monthEntries(month);if(!rows.length)return toast('No entries in '+month+'.','err');const snapshot=snapshotReports(month,rows);const commit=()=>{archives[month]={month,savedAt:new Date().toISOString(),entries:JSON.parse(JSON.stringify(rows)),reports:snapshot};saveState();renderArchives();toast('Archived '+month+'.','ok');};if(archives[month])confirmDialog('Replace?',`Archive for ${month} exists. Replace?`,commit,'Replace',false);else commit();}
-function renderArchives(){const months=Object.keys(archives).sort().reverse();$('archiveList').innerHTML=months.length?`<div class="table-wrap"><table><thead><tr><th>Month</th><th>Saved</th><th class="num">Entries</th><th class="num">Net income</th><th></th></tr></thead><tbody>${months.map(m=>{const a=archives[m];return `<tr><td><b>${esc(m)}</b></td><td class="small">${new Date(a.savedAt).toLocaleString()}</td><td class="num">${a.entries.length}</td><td class="num">${fmt(a.reports.netIncome)}</td><td><button class="btn alt sm" onclick="viewArchive('${m}')">Open</button> <button class="btn red sm" onclick="deleteArchive('${m}')">Delete</button></td></tr>`;}).join('')}</tbody></table></div>`:'<div class="empty">No archives yet.</div>';}
-function viewArchive(month){const a=archives[month];if(!a)return;const r=a.reports;const entriesHtml=a.entries.map(e=>`<div style="padding:10px 0;border-bottom:1px solid var(--line-2)"><b>${esc(e.desc)}</b><div class="muted small">${esc(e.date)}</div><div class="table-wrap"><table><thead><tr><th>Account</th><th class="num">Debit</th><th class="num">Credit</th></tr></thead><tbody>${e.lines.map(l=>`<tr><td>${esc(l.account)}</td><td class="num dr">${l.debit?fmt(l.debit):'—'}</td><td class="num cr">${l.credit?fmt(l.credit):'—'}</td></tr>`).join('')}</tbody></table></div></div>`).join('');$('archiveView').innerHTML=`<div class="card"><div class="row row-between"><h3>Archive — ${esc(month)}</h3><button class="btn light sm no-print" onclick="window.print()">Print</button></div><h4 style="margin-top:16px">Summary</h4><table><tbody><tr><td>Revenue</td><td class="num">${fmt(r.revenue)}</td></tr><tr><td>Expenses</td><td class="num">${fmt(r.expenses)}</td></tr><tr><th>Net income</th><th class="num">${fmt(r.netIncome)}</th></tr><tr><td>Total assets</td><td class="num">${fmt(r.totalAssets)}</td></tr><tr><td>Total liabilities</td><td class="num">${fmt(r.totalLiabilities)}</td></tr><tr><td>Ending equity</td><td class="num">${fmt(r.endingOwnersEquity)}</td></tr></tbody></table><h4 style="margin-top:16px">Journal entries</h4>${entriesHtml}</div>`;$('archiveView').scrollIntoView({behavior:'smooth'});}
-function deleteArchive(m){confirmDialog('Delete?',`Archive for ${m} will be removed.`,()=>{delete archives[m];saveState();renderArchives();$('archiveView').innerHTML='';toast('Deleted.','ok');},'Delete');}
-function exportAllArchives(){if(!Object.keys(archives).length)return toast('No archives.','err');saveJSON(archives,'serbiz-archives.json');}
-function restoreArchiveFromFile(ev){const f=ev.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const data=JSON.parse(rd.result);confirmDialog('Restore archives?',`Merge ${Object.keys(data).length} month(s)?`,()=>{archives=Object.assign({},archives,data);saveState();renderArchives();toast('Restored.','ok');},'Restore',false);}catch(e){toast('Invalid JSON.','err');}};rd.readAsText(f);ev.target.value='';}
-function backupAll(){saveJSON({version:3,exportedAt:new Date().toISOString(),entries,archives,settings:{...settings,pin:undefined}},'serbiz-backup-'+today+'.json');settings.lastBackup=new Date().toISOString();saveState();renderHealth();toast('Backup exported.','ok');}
-function restoreAllFromFile(ev){const f=ev.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const data=JSON.parse(rd.result);if(!Array.isArray(data.entries))throw Error('Missing entries');confirmDialog('Restore backup?',`Replace current ${entries.length} entries with ${data.entries.length} from backup? Safety backup auto-saved.`,()=>{localStorage.setItem('serbiz_safety_'+Date.now(),JSON.stringify({entries,archives}));entries=data.entries;if(data.archives)archives=data.archives;saveState();render();renderArchives();renderHealth();toast('Restored.','ok');},'Restore',true);}catch(e){toast('Invalid backup: '+e.message,'err');}};rd.readAsText(f);ev.target.value='';}
-function saveJSON(obj,name){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));a.download=name;a.click();URL.revokeObjectURL(a.href);}
-function csvRows(s){const rows=[];let row=[],v='',q=false;for(let i=0;i<s.length;i++){const c=s[i];if(c==='"'){if(q&&s[i+1]==='"'){v+='"';i++;}else q=!q;}else if(c===','&&!q){row.push(v);v='';}else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&s[i+1]==='\n')i++;row.push(v);if(row.some(x=>x.trim()))rows.push(row);row=[];v='';}else v+=c;}row.push(v);if(row.some(x=>x.trim()))rows.push(row);return rows;}
-async function readCSV(){const f=$('csv').files[0];if(!f)return toast('Choose a CSV.','err');try{const rows=csvRows(await f.text());const headers=rows.shift().map(x=>x.trim().toLowerCase());const ix=k=>headers.indexOf(k);if(['date','description','amount'].some(k=>ix(k)<0))throw Error('CSV needs date, description, amount.');let count=0,dup=0;rows.forEach(r=>{try{const d={date:r[ix('date')],desc:r[ix('description')],amount:r[ix('amount')],type:ix('type')>=0?r[ix('type')]:''};const t=classify(d.desc,+d.amount,d.type);t.date=d.date;t.id=uid();if(duplicateOf(t)){dup++;return;}if(!d.date||!d.desc||!(+d.amount>0))throw 0;pending.push(t);count++;}catch(e){}});if(!count)throw Error(dup?'All duplicates.':'No valid rows.');drawReview();toast(`Analyzed ${count} row(s)${dup?`, skipped ${dup} dup`:''}.`,'ok');}catch(e){toast(e.message,'err');}}
-function downloadTemplate(){const s='date,description,amount,type\n2026-01-01,Owner invested cash,100000,investment\n2026-01-02,Paid office rent,12000,expense\n2026-01-03,Received cash for services,25000,service\n';const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([s],{type:'text/csv'}));a.download='serbiz-template.csv';a.click();URL.revokeObjectURL(a.href);}
-function exportCSV(what){let rows=[],name='serbiz';if(what==='journal'){rows=[['date','description','account','debit','credit']];entries.slice().sort((a,b)=>(a.date||'').localeCompare(b.date||'')).forEach(e=>e.lines.forEach(l=>rows.push([e.date,e.desc,l.account,l.debit||'',l.credit||''])));name='journal';}else if(what==='trial'){const asOf=$('tbAsOf').value||today;const m=balances(entries.filter(e=>(e.date||'')<=asOf));rows=[['account','type','debit','credit']];Object.keys(m).sort().forEach(n=>{const v=net(m,n);rows.push([n,accountType(n),Math.max(v,0).toFixed(2),Math.max(-v,0).toFixed(2)]);});name='trial-balance-'+asOf;}const csv=rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));a.download=name+'.csv';a.click();URL.revokeObjectURL(a.href);}
-function resetBooks(){openModal('Reset all journal data?',`<p>This erases <b>${entries.length}</b> entries. Archives kept.</p><div class="field" style="margin-top:14px"><label>Type RESET to confirm</label><input id="resetWord" autocomplete="off"></div>`,[{label:'Cancel',class:'light',onClick:closeModal},{label:'Erase data',class:'red',onClick:()=>{if($('resetWord').value.trim().toUpperCase()!=='RESET')return toast('Type RESET.','err');entries=[];saveState();render();closeModal();toast('Journal reset.','ok');}}]);}
+function monthEntries(m){return entries.filter(function(e){return (e.date||'').slice(0,7)===m;});}
+function snapshotReports(month,rows){
+  var m=balances(rows);var names=Object.keys(m);var amt=function(n){return net(m,n);};var byType=function(t){return names.filter(function(n){return accountType(n)===t;});};
+  var revenue=byType('revenue').reduce(function(s,n){return s-amt(n);},0);
+  var expenses=byType('expense').reduce(function(s,n){return s+amt(n);},0);
+  var income=revenue-expenses;
+  var assetTotal=byType('asset').reduce(function(s,n){return s-amt(n);},0);
+  var liability=byType('liability').reduce(function(s,n){return s-amt(n);},0);
+  var capNet=byType('equity').filter(function(n){return /capital/i.test(n);}).reduce(function(s,n){return s-amt(n);},0);
+  var draws=byType('equity').filter(function(n){return /drawing/i.test(n);}).reduce(function(s,n){return s+amt(n);},0);
+  var equity=capNet+income-draws;
+  return{period:month,revenue:revenue,expenses:expenses,netIncome:income,totalAssets:assetTotal,totalLiabilities:liability,endingOwnersEquity:equity,totalLiabilitiesAndEquity:liability+equity};
+}
+function saveMonthlyArchive(){
+  var month=$('archiveMonth').value;
+  if(!month){toast('Choose month.','err');return;}
+  var rows=monthEntries(month);
+  if(!rows.length){toast('No entries in '+month+'.','err');return;}
+  var snapshot=snapshotReports(month,rows);
+  var commit=function(){archives[month]={month:month,savedAt:new Date().toISOString(),entries:JSON.parse(JSON.stringify(rows)),reports:snapshot};saveState();renderArchives();toast('Archived '+month+'.','ok');};
+  if(archives[month])confirmDialog('Replace?','Archive for '+month+' exists.','Replace',commit);
+  else commit();
+}
+function renderArchives(){
+  var months=Object.keys(archives).sort().reverse();
+  $('archiveList').innerHTML=months.length?'<div class="table-wrap"><table><thead><tr><th>Month</th><th>Saved</th><th class="num">Entries</th><th class="num">Net income</th><th></th></tr></thead><tbody>'+months.map(function(m){var a=archives[m];return '<tr><td><b>'+esc(m)+'</b></td><td class="small">'+new Date(a.savedAt).toLocaleString()+'</td><td class="num">'+a.entries.length+'</td><td class="num">'+fmt(a.reports.netIncome)+'</td><td><button class="btn alt sm" onclick="viewArchive(\''+m+'\')">Open</button></td></tr>';}).join('')+'</tbody></table></div>':'<div class="empty">None yet.</div>';
+}
+function viewArchive(month){
+  var a=archives[month];if(!a)return;
+  var r=a.reports;
+  var entriesHtml=a.entries.map(function(e){return '<div style="padding:10px 0;border-bottom:1px solid var(--line-2)"><b>'+esc(e.desc)+'</b><div class="muted small">'+esc(e.date)+'</div><div class="table-wrap"><table><thead><tr><th>Account</th><th class="num">Dr</th><th class="num">Cr</th></tr></thead><tbody>'+e.lines.map(function(l){return '<tr><td>'+esc(l.account)+'</td><td class="num dr">'+(l.debit?fmt(l.debit):'—')+'</td><td class="num cr">'+(l.credit?fmt(l.credit):'—')+'</td></tr>';}).join('')+'</tbody></table></div></div>';}).join('');
+  $('archiveView').innerHTML='<div class="card"><h3>Archive — '+esc(month)+'</h3><table><tbody><tr><td>Revenue</td><td class="num">'+fmt(r.revenue)+'</td></tr><tr><td>Expenses</td><td class="num">'+fmt(r.expenses)+'</td></tr><tr><th>Net income</th><th class="num">'+fmt(r.netIncome)+'</th></tr><tr><td>Total assets</td><td class="num">'+fmt(r.totalAssets)+'</td></tr><tr><td>Total liabilities</td><td class="num">'+fmt(r.totalLiabilities)+'</td></tr><tr><td>Ending equity</td><td class="num">'+fmt(r.endingOwnersEquity)+'</td></tr></tbody></table><h4 style="margin-top:16px">Journal entries</h4>'+entriesHtml+'</div>';
+  $('archiveView').scrollIntoView({behavior:'smooth'});
+}
+function exportAllArchives(){if(!Object.keys(archives).length){toast('None.','err');return;}saveJSON(archives,'serbiz-archives.json');}
+function backupAll(){saveJSON({version:3,exportedAt:new Date().toISOString(),entries:entries,archives:archives},'serbiz-backup-'+today+'.json');settings.lastBackup=new Date().toISOString();saveState();toast('Exported.','ok');}
+function restoreAllFromFile(ev){
+  var f=ev.target.files[0];if(!f)return;
+  var rd=new FileReader();
+  rd.onload=function(){
+    try{
+      var data=JSON.parse(rd.result);
+      if(!Array.isArray(data.entries))throw new Error('Missing entries');
+      confirmDialog('Restore?','Replace current '+entries.length+' entries with '+data.entries.length+'?',function(){
+        localStorage.setItem('serbiz_safety_'+Date.now(),JSON.stringify({entries:entries,archives:archives}));
+        entries=data.entries;
+        if(data.archives)archives=data.archives;
+        saveState();render();renderArchives();toast('Restored.','ok');
+      },'Restore');
+    }catch(e){toast('Invalid: '+e.message,'err');}
+  };
+  rd.readAsText(f);ev.target.value='';
+}
+function saveJSON(obj,name){
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));
+  a.download=name;a.click();URL.revokeObjectURL(a.href);
+}
+function csvRows(s){
+  var rows=[],row=[],v='',q=false;
+  for(var i=0;i<s.length;i++){
+    var c=s[i];
+    if(c==='"'){if(q&&s[i+1]==='"'){v+='"';i++;}else q=!q;}
+    else if(c===','&&!q){row.push(v);v='';}
+    else if((c==='\n'||c==='\r')&&!q){if(c==='\r'&&s[i+1]==='\n')i++;row.push(v);if(row.some(function(x){return x.trim();}))rows.push(row);row=[];v='';}
+    else v+=c;
+  }
+  row.push(v);if(row.some(function(x){return x.trim();}))rows.push(row);
+  return rows;
+}
+function readCSV(){
+  var f=$('csv').files[0];
+  if(!f){toast('Choose CSV.','err');return;}
+  var rd=new FileReader();
+  rd.onload=function(){
+    try{
+      var rows=csvRows(rd.result);
+      var headers=rows.shift().map(function(x){return x.trim().toLowerCase();});
+      var ix=function(k){return headers.indexOf(k);};
+      if(['date','description','amount'].some(function(k){return ix(k)<0;}))throw new Error('CSV needs date, description, amount.');
+      var count=0,dup=0;
+      rows.forEach(function(r){
+        try{
+          var d={date:r[ix('date')],desc:r[ix('description')],amount:r[ix('amount')],type:ix('type')>=0?r[ix('type')]:''};
+          var t=classify(d.desc,+d.amount,d.type);t.date=d.date;t.id=uid();
+          if(duplicateOf(t)){dup++;return;}
+          if(!d.date||!d.desc||!(+d.amount>0))throw 0;
+          pending.push(t);count++;
+        }catch(e){}
+      });
+      if(!count)throw new Error(dup?'All duplicates.':'No valid rows.');
+      drawReview();
+      toast('Analyzed '+count+(dup?', skipped '+dup+' dup':'')+'.','ok');
+    }catch(e){toast(e.message,'err');}
+  };
+  rd.readAsText(f);
+}
+function downloadTemplate(){
+  var s='date,description,amount,type\n2026-01-01,Owner invested cash,100000,investment\n2026-01-02,Paid office rent,12000,expense\n';
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([s],{type:'text/csv'}));
+  a.download='serbiz-template.csv';a.click();URL.revokeObjectURL(a.href);
+}
+function exportCSV(what){
+  var rows=[],name='serbiz';
+  if(what==='journal'){
+    rows=[['date','description','account','debit','credit']];
+    entries.slice().sort(function(a,b){return (a.date||'').localeCompare(b.date||'');}).forEach(function(e){e.lines.forEach(function(l){rows.push([e.date,e.desc,l.account,l.debit||'',l.credit||'']);});});
+    name='journal';
+  }else if(what==='trial'){
+    var asOf=$('tbAsOf').value||today;
+    var m=balances(entries.filter(function(e){return (e.date||'')<=asOf;}));
+    rows=[['account','type','debit','credit']];
+    Object.keys(m).sort().forEach(function(n){var v=net(m,n);rows.push([n,accountType(n),Math.max(v,0).toFixed(2),Math.max(-v,0).toFixed(2)]);});
+    name='trial-balance-'+asOf;
+  }
+  var csv=rows.map(function(r){return r.map(function(c){return '"'+String(c).replace(/"/g,'""')+'"';}).join(',');}).join('\n');
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));
+  a.download=name+'.csv';a.click();URL.revokeObjectURL(a.href);
+}
+function resetBooks(){
+  openModal('Reset all?','<p>Erases '+entries.length+' entries. Archives kept.</p><div class="field" style="margin-top:14px"><label>Type RESET</label><input id="resetWord"></div>',[{label:'Cancel',class:'light',onClick:closeModal},{label:'Erase',class:'red',onClick:function(){if($('resetWord').value.trim().toUpperCase()!=='RESET'){toast('Type RESET.','err');return;}entries=[];saveState();render();closeModal();toast('Reset.','ok');}}]);
+}
 function setTheme(v){settings.theme=v;saveState();applyTheme();}
-function applyTheme(){const v=settings.theme||'system';const dark=v==='dark'||(v==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=dark?'dark':'light';const sel=$('themeSelect');if(sel)sel.value=v;}
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(settings.theme==='system')applyTheme();});
-async function derivePin(pin,saltB64){const enc=new TextEncoder();const salt=Uint8Array.from(atob(saltB64),c=>c.charCodeAt(0));const key=await crypto.subtle.importKey('raw',enc.encode(pin),{name:'PBKDF2'},false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt,iterations:120000,hash:'SHA-256'},key,256);return btoa(String.fromCharCode(...new Uint8Array(bits)));}
-function openPinSetup(){openModal('Set PIN',`<div class="field"><label>New PIN</label><input id="pinNew" type="password" inputmode="numeric" maxlength="8"></div><div class="field"><label>Confirm PIN</label><input id="pinConfirm" type="password" inputmode="numeric" maxlength="8"></div><div class="notice danger small">If you forget, recovery is JSON backup only.</div>`,[{label:'Cancel',class:'light',onClick:closeModal},{label:'Save PIN',onClick:async()=>{const p=$('pinNew').value,c=$('pinConfirm').value;if(p.length<4||p.length>8||!/^\d+$/.test(p))return toast('PIN 4-8 digits.','err');if(p!==c)return toast('PINs do not match.','err');const salt=btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))));const hash=await derivePin(p,salt);settings.pin={salt,hash};saveState();closeModal();toast('PIN set.','ok');renderPinStatus();}}]);}
-function renderPinStatus(){const s=$('pinStatus');if(!s)return;s.textContent=settings.pin?'PIN enabled.':'PIN disabled.';}
-function lockNow(){if(!settings.pin)return toast('Set a PIN first.','err');$('lockScreen').style.display='flex';setTimeout(()=>$('pinInput').focus(),50);}
-async function unlock(){if(!settings.pin){$('lockScreen').style.display='none';return;}const v=$('pinInput').value;const h=await derivePin(v,settings.pin.salt);if(h===settings.pin.hash){$('lockScreen').style.display='none';$('pinInput').value='';}else{toast('Incorrect PIN.','err');$('pinInput').value='';}}
-function removePin(){if(!settings.pin)return toast('No PIN set.','err');confirmDialog('Remove PIN?','Anyone with this browser can open SERBIZ.',()=>{settings.pin=null;saveState();renderPinStatus();toast('PIN removed.','ok');},'Remove',true);}
-const CMD_ITEMS=[{label:'Dashboard',k:'home'},{label:'Transactions',k:'upload'},{label:'Journal',k:'journal'},{label:'Ledger',k:'ledger'},{label:'Trial Balance',k:'trial'},{label:'Adjusting',k:'adjusting'},{label:'Closing',k:'closing'},{label:'Worksheet',k:'worksheet'},{label:'Statements',k:'reports'},{label:'Archive',k:'archive'},{label:'Accounts',k:'accounts'},{label:'Settings',k:'settings'},{label:'Help',k:'help'},{label:'About',k:'about'},{label:'New transaction',action:()=>page('upload')},{label:'Statements',action:()=>page('reports')},{label:'Export backup',action:backupAll},{label:'Toggle theme',action:()=>setTheme(settings.theme==='dark'?'light':'dark')},{label:'Lock SERBIZ',action:lockNow}];
-function openCmd(){$('cmd').classList.add('open');$('cmdInput').value='';renderCmd();setTimeout(()=>$('cmdInput').focus(),30);}
-function closeCmd(){$('cmd').classList.remove('open');}
-let cmdSel=0;
-function renderCmd(){const q=($('cmdInput').value||'').toLowerCase();const accounts=[...new Set(entries.flatMap(e=>e.lines.map(l=>l.account)))].map(a=>({label:a,action:()=>{page('ledger');$('ledgerSelect').value=a;drawLedger();}}));const all=[...CMD_ITEMS.map(i=>({...i,action:i.action||(()=>page(i.k))})),...accounts].filter(i=>!q||i.label.toLowerCase().includes(q));const items=all.slice(0,12);if(cmdSel>=items.length)cmdSel=0;$('cmdList').innerHTML=items.length?items.map((it,i)=>`<div class="cmd-item ${i===cmdSel?'sel':''}" onclick="cmdRun(${i})"><span>${esc(it.label)}</span>${it.k?'<span style="font-size:10.5px;color:var(--ink-3);background:var(--paper-2);padding:2px 7px;border-radius:5px;font-family:monospace">page</span>':''}</div>`).join(''):'<div class="cmd-item muted">No matches</div>';$('cmdList')._items=items;}
-function cmdRun(i){const items=$('cmdList')._items;if(!items[i])return;items[i].action();closeCmd();}
-function cmdKey(e){const items=$('cmdList')._items||[];if(e.key==='ArrowDown'){e.preventDefault();cmdSel=Math.min(cmdSel+1,items.length-1);renderCmd();}else if(e.key==='ArrowUp'){e.preventDefault();cmdSel=Math.max(cmdSel-1,0);renderCmd();}else if(e.key==='Enter'){e.preventDefault();cmdRun(cmdSel);}}
-function renderDashboard(){
-  const lines=entries.flatMap(e=>e.lines);const d=lines.reduce((s,l)=>s+l.debit,0),c=lines.reduce((s,l)=>s+l.credit,0);
-  $('sTx').textContent=entries.length;$('sAcc').textContent=new Set(lines.map(l=>l.account)).size;$('sDr').textContent=fmt(d);$('sCr').textContent=fmt(c);
-  const recent=entries.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,6);
-  $('recent').innerHTML=recent.length?recent.map(e=>{const amt=e.lines.reduce((s,l)=>s+l.debit,0);return `<div style="padding:10px 0;border-bottom:1px solid var(--line-2)"><div class="row row-between"><b>${esc(e.desc)}</b><span class="num">${fmt(amt)}</span></div><div class="muted small">${fmtDate(e.date)}</div></div>`;}).join(''):'<div class="empty"><h4>No transactions yet</h4><p>Start with a CSV or manual entry.</p></div>';
-  const months=[];for(let i=5;i>=0;i--){const dt=new Date();dt.setMonth(dt.getMonth()-i);const m=dt.toISOString().slice(0,7);months.push({m,label:dt.toLocaleDateString('en-PH',{month:'short'})});}
-  months.forEach(x=>{const rows=entries.filter(e=>(e.date||'').slice(0,7)===x.m);const m=balances(rows);const names=Object.keys(m);const rev=names.filter(n=>accountType(n)==='revenue').reduce((s,n)=>s-net(m,n),0);const exp=names.filter(n=>accountType(n)==='expense').reduce((s,n)=>s+net(m,n),0);x.value=rev-exp;});
-  const max=Math.max(1,...months.map(m=>Math.abs(m.value)));const w=100/months.length;
-  const bars=months.map((m,i)=>{const h=Math.abs(m.value)/max*80;const y=m.value>=0?90-h:90;const color=m.value>=0?'var(--green)':'var(--red)';return `<rect x="${i*w+1}" y="${y}" width="${w-2}" height="${h||1}" fill="${color}" opacity=".7" rx="2"/><text x="${i*w+w/2}" y="105" font-size="4" text-anchor="middle" fill="var(--ink-3)">${m.label}</text>`;}).join('');
-  $('spark').innerHTML=`<svg viewBox="0 0 100 110" preserveAspectRatio="none" style="width:100%;height:100%">${bars}</svg>`;
+function applyTheme(){
+  var v=settings.theme||'system';
+  var dark=v==='dark'||(v==='system'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme=dark?'dark':'light';
+  var sel=$('themeSelect');if(sel)sel.value=v;
 }
-function renderHealth(){if(!$('health'))return;const lines=entries.flatMap(e=>e.lines);const d=lines.reduce((s,l)=>s+l.debit,0),c=lines.reduce((s,l)=>s+l.credit,0);const inBalance=Math.abs(d-c)<0.005;const lastBackup=settings.lastBackup?new Date(settings.lastBackup).toLocaleString():'Never';$('health').innerHTML=`<table><tbody><tr><td>Journal entries</td><td class="num">${entries.length}</td></tr><tr><td>Accounts</td><td class="num">${new Set(lines.map(l=>l.account)).size}</td></tr><tr><td>Journal integrity</td><td class="num">${inBalance?'<span class="tag g">Balanced</span>':'<span class="tag r">Out of balance</span>'}</td></tr><tr><td>Archives</td><td class="num">${Object.keys(archives).length}</td></tr><tr><td>Last backup</td><td class="num">${lastBackup}</td></tr></tbody></table>${inBalance?'':'<div class="notice danger small">Trial balance out of balance.</div>'}`;}
-const SEED_ACCOUNTS=[['Cash','asset','debit','Cash on hand'],['Accounts Receivable','asset','debit','Owed by customers'],['Supplies','asset','debit','Consumables'],['Prepaid Insurance','asset','debit','Prepaid'],['Equipment','asset','debit','Business equipment'],['Accumulated Depreciation','asset','credit','Contra-asset'],['Accounts Payable','liability','credit','Owed to suppliers'],['Unearned Revenue','liability','credit','Payments for future'],['Owner, Capital','equity','credit','Owner investment'],['Owner, Drawing','equity','debit','Owner withdrawals'],['Income Summary','equity','credit','Closing account'],['Service Revenue','revenue','credit','Service income'],['Rent Expense','expense','debit','Rent'],['Salaries Expense','expense','debit','Compensation'],['Utilities Expense','expense','debit','Utilities'],['Supplies Expense','expense','debit','Supplies used'],['Insurance Expense','expense','debit','Insurance used'],['Depreciation Expense','expense','debit','Depreciation'],['Bad Debt Expense','expense','debit','Bad debt']];
-function seedDefaultAccounts(quiet){if(!settings.accounts)settings.accounts={};let added=0;SEED_ACCOUNTS.forEach(([name,type,normal,note])=>{const key=name.toLowerCase();if(!settings.accounts[key]){settings.accounts[key]={name,type,normal,note,active:true,isDefault:true};added++;}});saveState();if(!quiet){renderAccounts();toast(`Seeded ${added}.`,'ok');}return added;}
-function ensureRegistrySync(){if(!settings.accounts)settings.accounts={};const used=new Set(entries.flatMap(e=>e.lines.map(l=>l.account.trim())));let changed=false;used.forEach(name=>{const key=name.toLowerCase();if(!settings.accounts[key]){settings.accounts[key]={name,type:accountType(name),normal:accountNormal(name),note:'',active:true};changed=true;}});if(changed)saveState();}
+if(window.matchMedia)window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){if(settings.theme==='system')applyTheme();});
+function derivePin(pin,saltB64){
+  var enc=new TextEncoder();
+  var salt=Uint8Array.from(atob(saltB64),function(c){return c.charCodeAt(0);});
+  return crypto.subtle.importKey('raw',enc.encode(pin),{name:'PBKDF2'},false,['deriveBits']).then(function(key){
+    return crypto.subtle.deriveBits({name:'PBKDF2',salt:salt,iterations:120000,hash:'SHA-256'},key,256);
+  }).then(function(bits){return btoa(String.fromCharCode.apply(null,new Uint8Array(bits)));});
+}
+function openPinSetup(){
+  openModal('Set PIN','<div class="field"><label>New PIN</label><input id="pinNew" type="password" inputmode="numeric" maxlength="8"></div><div class="field"><label>Confirm</label><input id="pinConfirm" type="password" inputmode="numeric" maxlength="8"></div><div class="notice danger small">If forgotten, recovery is JSON backup only.</div>',[
+    {label:'Cancel',class:'light',onClick:closeModal},
+    {label:'Save',onClick:function(){
+      var p=$('pinNew').value,c=$('pinConfirm').value;
+      if(p.length<4||p.length>8||!/^\d+$/.test(p)){toast('PIN 4-8 digits.','err');return;}
+      if(p!==c){toast('Mismatch.','err');return;}
+      var arr=crypto.getRandomValues(new Uint8Array(16));
+      var salt=btoa(String.fromCharCode.apply(null,arr));
+      derivePin(p,salt).then(function(hash){
+        settings.pin={salt:salt,hash:hash};saveState();closeModal();toast('PIN set.','ok');renderPinStatus();
+      });
+    }}
+  ]);
+}
+function renderPinStatus(){var s=$('pinStatus');if(s)s.textContent=settings.pin?'PIN enabled.':'PIN disabled.';}
+function lockNow(){if(!settings.pin){toast('Set PIN first.','err');return;}$('lockScreen').style.display='flex';setTimeout(function(){$('pinInput').focus();},50);}
+function unlock(){
+  if(!settings.pin){$('lockScreen').style.display='none';return;}
+  var v=$('pinInput').value;
+  derivePin(v,settings.pin.salt).then(function(h){
+    if(h===settings.pin.hash){$('lockScreen').style.display='none';$('pinInput').value='';}
+    else{toast('Wrong PIN.','err');$('pinInput').value='';}
+  });
+}
+function removePin(){if(!settings.pin){toast('No PIN.','err');return;}confirmDialog('Remove PIN?','Anyone with browser can open.','Remove',function(){settings.pin=null;saveState();renderPinStatus();toast('Removed.','ok');});}
+var CMD_ITEMS=[
+  {label:'Dashboard',k:'home'},{label:'Transactions',k:'upload'},{label:'Journal',k:'journal'},{label:'Ledger',k:'ledger'},{label:'Trial Balance',k:'trial'},{label:'Adjusting',k:'adjusting'},{label:'Closing',k:'closing'},{label:'Worksheet',k:'worksheet'},{label:'Statements',k:'reports'},{label:'Archive',k:'archive'},{label:'Accounts',k:'accounts'},{label:'Settings',k:'settings'},{label:'Help',k:'help'},{label:'About',k:'about'},
+  {label:'New transaction',action:function(){page('upload');}},
+  {label:'Export backup',action:backupAll},
+  {label:'Toggle theme',action:function(){setTheme(settings.theme==='dark'?'light':'dark');}},
+  {label:'Lock',action:lockNow}
+];
+function openCmd(){$('cmd').classList.add('open');$('cmdInput').value='';renderCmd();setTimeout(function(){$('cmdInput').focus();},30);}
+function closeCmd(){$('cmd').classList.remove('open');}
+var cmdSel=0;
+function renderCmd(){
+  var q=($('cmdInput').value||'').toLowerCase();
+  var all=CMD_ITEMS.map(function(i){return{label:i.label,action:i.action||function(){page(i.k);}};}).filter(function(i){return !q||i.label.toLowerCase().indexOf(q)>=0;});
+  var items=all.slice(0,12);
+  if(cmdSel>=items.length)cmdSel=0;
+  $('cmdList').innerHTML=items.length?items.map(function(it,i){return '<div class="cmd-item '+(i===cmdSel?'sel':'')+'" onclick="cmdRun('+i+')">'+esc(it.label)+'</div>';}).join(''):'<div class="cmd-item muted">No matches</div>';
+  $('cmdList')._items=items;
+}
+function cmdRun(i){var items=$('cmdList')._items;if(!items[i])return;items[i].action();closeCmd();}
+function cmdKey(e){var items=$('cmdList')._items||[];if(e.key==='ArrowDown'){e.preventDefault();cmdSel=Math.min(cmdSel+1,items.length-1);renderCmd();}else if(e.key==='ArrowUp'){e.preventDefault();cmdSel=Math.max(cmdSel-1,0);renderCmd();}else if(e.key==='Enter'){e.preventDefault();cmdRun(cmdSel);}}
+function renderDashboard(){
+  var lines=[];entries.forEach(function(e){e.lines.forEach(function(l){lines.push(l);});});
+  var d=lines.reduce(function(s,l){return s+l.debit;},0);
+  var c=lines.reduce(function(s,l){return s+l.credit;},0);
+  var accSet={};lines.forEach(function(l){accSet[l.account]=1;});
+  $('sTx').textContent=entries.length;
+  $('sAcc').textContent=Object.keys(accSet).length;
+  $('sDr').textContent=fmt(d);
+  $('sCr').textContent=fmt(c);
+  var recent=entries.slice().sort(function(a,b){return (b.date||'').localeCompare(a.date||'');}).slice(0,6);
+  $('recent').innerHTML=recent.length?recent.map(function(e){var amt=e.lines.reduce(function(s,l){return s+l.debit;},0);return '<div style="padding:10px 0;border-bottom:1px solid var(--line-2)"><div class="row row-between"><b>'+esc(e.desc)+'</b><span class="num">'+fmt(amt)+'</span></div><div class="muted small">'+fmtDate(e.date)+'</div></div>';}).join(''):'<div class="empty"><h4>No transactions yet</h4><p>Start with CSV or manual entry.</p></div>';
+}
+function renderHealth(){
+  if(!$('health'))return;
+  var lines=[];entries.forEach(function(e){e.lines.forEach(function(l){lines.push(l);});});
+  var d=lines.reduce(function(s,l){return s+l.debit;},0);
+  var c=lines.reduce(function(s,l){return s+l.credit;},0);
+  var inBalance=Math.abs(d-c)<0.005;
+  var accSet={};lines.forEach(function(l){accSet[l.account]=1;});
+  $('health').innerHTML='<table><tbody><tr><td>Entries</td><td class="num">'+entries.length+'</td></tr><tr><td>Accounts</td><td class="num">'+Object.keys(accSet).length+'</td></tr><tr><td>Integrity</td><td class="num">'+(inBalance?'<span class="tag g">Balanced</span>':'<span class="tag r">Out of balance</span>')+'</td></tr><tr><td>Archives</td><td class="num">'+Object.keys(archives).length+'</td></tr></tbody></table>';
+}
+var SEED_ACCOUNTS=[
+  ['Cash','asset','debit','Cash on hand'],['Accounts Receivable','asset','debit','Owed by customers'],['Supplies','asset','debit','Consumables'],['Prepaid Insurance','asset','debit','Prepaid'],['Equipment','asset','debit','Business equipment'],['Accumulated Depreciation','asset','credit','Contra-asset'],['Accounts Payable','liability','credit','Owed to suppliers'],['Unearned Revenue','liability','credit','Payments for future'],['Owner, Capital','equity','credit','Investment'],['Owner, Drawing','equity','debit','Withdrawals'],['Income Summary','equity','credit','Closing'],['Service Revenue','revenue','credit','Income'],['Rent Expense','expense','debit','Rent'],['Salaries Expense','expense','debit','Compensation'],['Utilities Expense','expense','debit','Utilities'],['Supplies Expense','expense','debit','Supplies used'],['Insurance Expense','expense','debit','Insurance'],['Depreciation Expense','expense','debit','Depreciation'],['Bad Debt Expense','expense','debit','Bad debt']
+];
+function seedDefaultAccounts(quiet){
+  if(!settings.accounts)settings.accounts={};
+  var added=0;
+  SEED_ACCOUNTS.forEach(function(arr){var name=arr[0],type=arr[1],normal=arr[2],note=arr[3];var key=name.toLowerCase();if(!settings.accounts[key]){settings.accounts[key]={name:name,type:type,normal:normal,note:note,active:true,isDefault:true};added++;}});
+  saveState();
+  if(!quiet){renderAccounts();toast('Seeded '+added+'.','ok');}
+  return added;
+}
+function ensureRegistrySync(){
+  if(!settings.accounts)settings.accounts={};
+  var used={};entries.forEach(function(e){e.lines.forEach(function(l){used[l.account.trim()]=1;});});
+  var changed=false;
+  Object.keys(used).forEach(function(name){var key=name.toLowerCase();if(!settings.accounts[key]){settings.accounts[key]={name:name,type:accountType(name),normal:accountNormal(name),note:'',active:true};changed=true;}});
+  if(changed)saveState();
+}
 function renderAccounts(){
   ensureRegistrySync();
-  const q=($('acctSearch').value||'').toLowerCase().trim();const filter=$('acctFilter').value;
-  let regs=Object.values(settings.accounts||{});
-  regs=regs.filter(r=>{if(q&&!r.name.toLowerCase().includes(q))return false;if(filter==='inactive')return r.active===false;if(filter&&r.type!==filter)return false;return true;});
-  regs.sort((a,b)=>{const order={asset:0,liability:1,equity:2,revenue:3,expense:4};if(order[a.type]!==order[b.type])return order[a.type]-order[b.type];return a.name.localeCompare(b.name);});
-  if(!regs.length){$('accountsTable').innerHTML='<div class="empty">No accounts.</div>';}
-  else{$('accountsTable').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Account</th><th>Type</th><th>Normal</th><th>Status</th><th></th></tr></thead><tbody>${regs.map(r=>`<tr class="${r.active===false?'acct-row-inactive':''}"><td><div class="acct-name">${esc(r.name)}</div>${r.note?`<div class="acct-note">${esc(r.note)}</div>`:''}</td><td><select class="acct-type-select" onchange="updateAccountType('${esc(r.name)}',this.value)">${['asset','liability','equity','revenue','expense'].map(t=>`<option value="${t}" ${r.type===t?'selected':''}>${t[0].toUpperCase()+t.slice(1)}</option>`).join('')}</select></td><td><span class="tag">${r.normal==='debit'?'Dr':'Cr'}</span></td><td>${r.active===false?'<span class="tag">Inactive</span>':'<span class="tag g">Active</span>'}</td><td class="right" style="white-space:nowrap"><button class="btn light sm" onclick="openEditAccount('${esc(r.name)}')">Edit</button> ${r.active===false?`<button class="btn alt sm" onclick="reactivateAccount('${esc(r.name)}')">Reactivate</button>`:`<button class="btn light sm" onclick="deactivateAccount('${esc(r.name)}')">Archive</button>`}</td></tr>`).join('')}</tbody></table></div>`;}
+  var q=($('acctSearch').value||'').toLowerCase().trim();
+  var filter=$('acctFilter').value;
+  var regs=Object.keys(settings.accounts||{}).map(function(k){return settings.accounts[k];});
+  regs=regs.filter(function(r){if(q&&r.name.toLowerCase().indexOf(q)<0)return false;if(filter&&r.type!==filter)return false;return true;});
+  regs.sort(function(a,b){var order={asset:0,liability:1,equity:2,revenue:3,expense:4};if(order[a.type]!==order[b.type])return order[a.type]-order[b.type];return a.name.localeCompare(b.name);});
+  if(!regs.length){$('accountsTable').innerHTML='<div class="empty">No accounts.</div>';return;}
+  $('accountsTable').innerHTML='<div class="table-wrap"><table><thead><tr><th>Account</th><th>Type</th><th>Normal</th><th></th></tr></thead><tbody>'+regs.map(function(r){
+    return '<tr class="'+(r.active===false?'acct-row-inactive':'')+'"><td><div class="acct-name">'+esc(r.name)+'</div></td><td><select class="acct-type-select" onchange="updateAccountType(\''+esc(r.name)+'\',this.value)">'+['asset','liability','equity','revenue','expense'].map(function(t){return '<option value="'+t+'"'+(r.type===t?' selected':'')+'>'+t.charAt(0).toUpperCase()+t.slice(1)+'</option>';}).join('')+'</select></td><td><span class="tag">'+(r.normal==='debit'?'Dr':'Cr')+'</span></td><td class="right"><button class="btn light sm" onclick="openEditAccount(\''+esc(r.name)+'\')">Edit</button></td></tr>';
+  }).join('')+'</tbody></table></div>';
 }
-function updateAccountType(name,type){const key=name.trim().toLowerCase();if(!settings.accounts[key])return;settings.accounts[key].type=type;settings.accounts[key].normal=DEFAULT_NORMAL[type];saveState();renderAccounts();if($('trial').classList.contains('active'))trial();toast(`"${name}" is now ${type}.`,'ok');}
-function openAddAccount(prefill){openModal('Add account',`<div class="field"><label>Name</label><input id="acctName" value="${esc(prefill||'')}"></div><div class="field"><label>Type</label><select id="acctType"><option value="asset">Asset</option><option value="liability">Liability</option><option value="equity">Equity</option><option value="revenue">Revenue</option><option value="expense">Expense</option></select></div><div class="field"><label>Normal</label><select id="acctNormal"><option value="debit">Debit</option><option value="credit">Credit</option></select></div><div class="field"><label>Note</label><input id="acctNote"></div>`,[{label:'Cancel',class:'light',onClick:closeModal},{label:'Save',onClick:()=>{const name=$('acctName').value.trim();if(!name)return toast('Name required.','err');const key=name.toLowerCase();if(settings.accounts[key])return toast('Exists.','err');settings.accounts[key]={name,type:$('acctType').value,normal:$('acctNormal').value,note:$('acctNote').value.trim(),active:true};saveState();renderAccounts();closeModal();toast('Added.','ok');}}]);}
-function openEditAccount(name){const key=name.trim().toLowerCase();const r=settings.accounts[key];if(!r)return;openModal('Edit',`<div class="field"><label>Name</label><input id="editName" value="${esc(r.name)}"></div><div class="field"><label>Type</label><select id="editType">${['asset','liability','equity','revenue','expense'].map(t=>`<option value="${t}" ${r.type===t?'selected':''}>${t}</option>`).join('')}</select></div><div class="field"><label>Normal</label><select id="editNormal"><option value="debit" ${r.normal==='debit'?'selected':''}>Debit</option><option value="credit" ${r.normal==='credit'?'selected':''}>Credit</option></select></div><div class="field"><label>Note</label><input id="editNote" value="${esc(r.note||'')}"></div>`,[{label:'Cancel',class:'light',onClick:closeModal},{label:'Save',onClick:()=>{const newName=$('editName').value.trim();if(!newName)return toast('Name required.','err');const newKey=newName.toLowerCase();if(newKey!==key&&settings.accounts[newKey])return toast('Name taken.','err');const snap=[];entries.forEach(e=>e.lines.forEach(l=>{if(l.account.trim().toLowerCase()===key){snap.push({line:l,old:l.account});l.account=newName;}}));delete settings.accounts[key];settings.accounts[newKey]={name:newName,type:$('editType').value,normal:$('editNormal').value,note:$('editNote').value.trim(),active:r.active!==false};saveState();renderAccounts();closeModal();render();toast('Updated.','ok','Undo',()=>{snap.forEach(s=>s.line.account=s.old);delete settings.accounts[newKey];settings.accounts[key]=r;saveState();renderAccounts();render();},8000);}}]);}
-function deactivateAccount(name){const key=name.trim().toLowerCase();confirmDialog('Archive?',`"${esc(name)}" will be hidden from pickers but kept in history.`,()=>{settings.accounts[key].active=false;saveState();renderAccounts();toast('Archived.','ok','Undo',()=>{settings.accounts[key].active=true;saveState();renderAccounts();},8000);},'Archive',false);}
-function reactivateAccount(name){const key=name.trim().toLowerCase();if(!settings.accounts[key])return;settings.accounts[key].active=true;saveState();renderAccounts();toast('Reactivated.','ok');}
-function openMergeAccounts(){const list=Object.values(settings.accounts||{}).sort((a,b)=>a.name.localeCompare(b.name));if(list.length<2)return toast('Need 2+.','err');openModal('Merge',`<div class="field"><label>Source</label><select id="mergeFrom">${list.map(r=>`<option value="${esc(r.name)}">${esc(r.name)}</option>`).join('')}</select></div><div class="field"><label>Target</label><select id="mergeTo">${list.map(r=>`<option value="${esc(r.name)}">${esc(r.name)}</option>`).join('')}</select></div>`,[{label:'Cancel',class:'light',onClick:closeModal},{label:'Merge',class:'red',onClick:()=>{const from=$('mergeFrom').value.trim();const to=$('mergeTo').value.trim();if(from.toLowerCase()===to.toLowerCase())return toast('Must differ.','err');const fromKey=from.toLowerCase();let touched=0;entries.forEach(e=>e.lines.forEach(l=>{if(l.account.trim().toLowerCase()===fromKey){l.account=to;touched++;}}));delete settings.accounts[fromKey];saveState();renderAccounts();render();closeModal();toast(`Merged. ${touched} updated.`,'ok');}}]);}
-function regenerateFromEntries(){confirmDialog('Rebuild chart?','Scans journal and rebuilds. Manual edits lost.',()=>{const used=[...new Set(entries.flatMap(e=>e.lines.map(l=>l.account.trim())))];settings.accounts={};used.forEach(name=>{const key=name.toLowerCase();settings.accounts[key]={name,type:accountType(name),normal:accountNormal(name),note:'',active:true};});saveState();renderAccounts();render();toast(`Rebuilt with ${used.length}.`,'ok');},'Rebuild',true);}
-function exportAccountsCSV(){const rows=[['name','type','normal','active','note']];Object.values(settings.accounts||{}).forEach(r=>rows.push([r.name,r.type,r.normal,r.active===false?'no':'yes',r.note||'']));const csv=rows.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv'}));a.download='serbiz-chart-of-accounts.csv';a.click();URL.revokeObjectURL(a.href);toast('Exported.','ok');}
+function updateAccountType(name,type){
+  var key=name.trim().toLowerCase();
+  if(!settings.accounts[key])return;
+  settings.accounts[key].type=type;
+  settings.accounts[key].normal=DEFAULT_NORMAL[type];
+  saveState();renderAccounts();toast('Updated.','ok');
+}
+function openAddAccount(prefill){
+  openModal('Add account','<div class="field"><label>Name</label><input id="acctName" value="'+esc(prefill||'')+'"></div><div class="field"><label>Type</label><select id="acctType"><option value="asset">Asset</option><option value="liability">Liability</option><option value="equity">Equity</option><option value="revenue">Revenue</option><option value="expense">Expense</option></select></div><div class="field"><label>Normal</label><select id="acctNormal"><option value="debit">Debit</option><option value="credit">Credit</option></select></div>',[
+    {label:'Cancel',class:'light',onClick:closeModal},
+    {label:'Save',onClick:function(){
+      var name=$('acctName').value.trim();
+      if(!name){toast('Name required.','err');return;}
+      var key=name.toLowerCase();
+      if(settings.accounts[key]){toast('Exists.','err');return;}
+      settings.accounts[key]={name:name,type:$('acctType').value,normal:$('acctNormal').value,note:'',active:true};
+      saveState();renderAccounts();closeModal();toast('Added.','ok');
+    }}
+  ]);
+}
+function openEditAccount(name){
+  var key=name.trim().toLowerCase();
+  var r=settings.accounts[key];if(!r)return;
+  openModal('Edit','<div class="field"><label>Name</label><input id="editName" value="'+esc(r.name)+'"></div><div class="field"><label>Type</label><select id="editType">'+['asset','liability','equity','revenue','expense'].map(function(t){return '<option value="'+t+'"'+(r.type===t?' selected':'')+'>'+t+'</option>';}).join('')+'</select></div>',[
+    {label:'Cancel',class:'light',onClick:closeModal},
+    {label:'Save',onClick:function(){
+      var newName=$('editName').value.trim();
+      if(!newName){toast('Name required.','err');return;}
+      var newKey=newName.toLowerCase();
+      if(newKey!==key&&settings.accounts[newKey]){toast('Name taken.','err');return;}
+      entries.forEach(function(e){e.lines.forEach(function(l){if(l.account.trim().toLowerCase()===key)l.account=newName;});});
+      delete settings.accounts[key];
+      settings.accounts[newKey]={name:newName,type:$('editType').value,normal:r.normal,note:r.note||'',active:r.active!==false};
+      saveState();renderAccounts();closeModal();render();toast('Updated.','ok');
+    }}
+  ]);
+}
+function regenerateFromEntries(){
+  confirmDialog('Rebuild chart?','Scans journal and rebuilds.',function(){
+    var used={};entries.forEach(function(e){e.lines.forEach(function(l){used[l.account.trim()]=1;});});
+    settings.accounts={};
+    Object.keys(used).forEach(function(name){var key=name.toLowerCase();settings.accounts[key]={name:name,type:accountType(name),normal:accountNormal(name),note:'',active:true};});
+    saveState();renderAccounts();render();toast('Rebuilt.','ok');
+  },'Rebuild');
+}
 function updateAdjForm(){
-  const type=$('adjType').value;let html='';
-  if(type==='depreciation'){html=`<div class="depr-calc"><div class="field"><label>Accumulated depreciation</label><input id="adjAccumAcct" value="Accumulated Depreciation"></div><div class="field"><label>Depreciation expense</label><input id="adjDeprAcct" value="Depreciation Expense"></div><div class="row" style="gap:8px"><div class="field" style="flex:1;margin:0"><label>Cost</label><input id="adjCost" type="number" min="0" step=".01" oninput="calcDepr()"></div><div class="field" style="flex:1;margin:0"><label>Salvage</label><input id="adjSalvage" type="number" min="0" step=".01" value="0" oninput="calcDepr()"></div></div><div class="row" style="gap:8px"><div class="field" style="flex:1;margin:0"><label>Life (months)</label><input id="adjLife" type="number" min="1" value="60" oninput="calcDepr()"></div><div class="field" style="flex:1;margin:0"><label>Months this period</label><input id="adjMonths" type="number" min="1" value="1" oninput="calcDepr()"></div></div><div class="muted small" id="deprResult">Enter cost.</div></div>`;}
-  else if(type==='accrued-expense'){html=`<div class="field"><label>Expense account</label><input id="adjDebitAcct" placeholder="e.g. Salaries Expense"></div><div class="field"><label>Payable</label><input id="adjCreditAcct" value="Accounts Payable"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" min=".01" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc" placeholder="Accrued salaries"></div>`;}
-  else if(type==='accrued-revenue'){html=`<div class="field"><label>Receivable</label><input id="adjDebitAcct" value="Accounts Receivable"></div><div class="field"><label>Revenue</label><input id="adjCreditAcct" value="Service Revenue"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" min=".01" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc" placeholder="Accrued revenue"></div>`;}
-  else if(type==='prepaid'){html=`<div class="field"><label>Expense</label><input id="adjDebitAcct" placeholder="e.g. Insurance Expense"></div><div class="field"><label>Prepaid</label><input id="adjCreditAcct" placeholder="e.g. Prepaid Insurance"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" min=".01" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>`;}
-  else if(type==='unearned'){html=`<div class="field"><label>Unearned</label><input id="adjDebitAcct" value="Unearned Revenue"></div><div class="field"><label>Revenue</label><input id="adjCreditAcct" value="Service Revenue"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" min=".01" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>`;}
-  else if(type==='bad-debt'){html=`<div class="field"><label>Expense</label><input id="adjDebitAcct" value="Bad Debt Expense"></div><div class="field"><label>Allowance</label><input id="adjCreditAcct" value="Allowance for Doubtful Accounts"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" min=".01" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc" value="Estimated bad debt"></div>`;}
-  else{html=`<div class="field"><label>Debit</label><input id="adjDebitAcct"></div><div class="field"><label>Credit</label><input id="adjCreditAcct"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" min=".01" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>`;}
-  html+=`<div style="border-top:1px solid var(--line-2);padding-top:12px;margin-top:12px"><label class="small" style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="adjReverse" style="width:auto"><span>Create reversing entry</span></label><div class="field" id="adjReverseDateWrap" style="display:none;margin-top:8px"><label>Reversal date</label><input id="adjReverseDate" type="date"></div></div>`;
+  var type=$('adjType').value;
+  var html='';
+  if(type==='depreciation'){
+    html='<div class="depr-calc"><div class="field"><label>Accumulated depreciation</label><input id="adjAccumAcct" value="Accumulated Depreciation"></div><div class="field"><label>Depreciation expense</label><input id="adjDeprAcct" value="Depreciation Expense"></div><div class="row" style="gap:8px"><div class="field" style="flex:1;margin:0"><label>Cost</label><input id="adjCost" type="number" oninput="calcDepr()"></div><div class="field" style="flex:1;margin:0"><label>Salvage</label><input id="adjSalvage" type="number" value="0" oninput="calcDepr()"></div></div><div class="row" style="gap:8px"><div class="field" style="flex:1;margin:0"><label>Life months</label><input id="adjLife" type="number" value="60" oninput="calcDepr()"></div><div class="field" style="flex:1;margin:0"><label>Months</label><input id="adjMonths" type="number" value="1" oninput="calcDepr()"></div></div><div class="muted small" id="deprResult">Enter cost.</div></div>';
+  }else if(type==='accrued-expense'){
+    html='<div class="field"><label>Expense</label><input id="adjDebitAcct" placeholder="Salaries Expense"></div><div class="field"><label>Payable</label><input id="adjCreditAcct" value="Accounts Payable"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc" placeholder="Accrued salaries"></div>';
+  }else if(type==='accrued-revenue'){
+    html='<div class="field"><label>Receivable</label><input id="adjDebitAcct" value="Accounts Receivable"></div><div class="field"><label>Revenue</label><input id="adjCreditAcct" value="Service Revenue"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>';
+  }else if(type==='prepaid'){
+    html='<div class="field"><label>Expense</label><input id="adjDebitAcct" placeholder="Insurance Expense"></div><div class="field"><label>Prepaid</label><input id="adjCreditAcct" placeholder="Prepaid Insurance"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>';
+  }else if(type==='unearned'){
+    html='<div class="field"><label>Unearned</label><input id="adjDebitAcct" value="Unearned Revenue"></div><div class="field"><label>Revenue</label><input id="adjCreditAcct" value="Service Revenue"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>';
+  }else if(type==='bad-debt'){
+    html='<div class="field"><label>Expense</label><input id="adjDebitAcct" value="Bad Debt Expense"></div><div class="field"><label>Allowance</label><input id="adjCreditAcct" value="Allowance for Doubtful Accounts"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>';
+  }else{
+    html='<div class="field"><label>Debit</label><input id="adjDebitAcct"></div><div class="field"><label>Credit</label><input id="adjCreditAcct"></div><div class="field"><label>Amount</label><input id="adjAmount" type="number" step=".01"></div><div class="field"><label>Description</label><input id="adjDesc"></div>';
+  }
+  html+='<div style="border-top:1px solid var(--line-2);padding-top:12px;margin-top:12px"><label class="small"><input type="checkbox" id="adjReverse" style="width:auto"> Create reversing entry next period</label></div>';
   $('adjForm').innerHTML=html;
-  const cb=$('adjReverse');
-  if(cb){cb.addEventListener('change',()=>{const wrap=$('adjReverseDateWrap');wrap.style.display=cb.checked?'block':'none';if(cb.checked&&!$('adjReverseDate').value){const period=$('adjPeriod').value||today.slice(0,7);$('adjReverseDate').value=nextPeriodFirstDay(period+'-15');}});}
 }
-function calcDepr(){const cost=+$('adjCost').value||0;const salvage=+$('adjSalvage').value||0;const life=+$('adjLife').value||0;const months=+$('adjMonths').value||1;if(!cost||!life){$('deprResult').textContent='Enter cost and life.';return;}const monthly=(cost-salvage)/life;const total=monthly*months;$('deprResult').innerHTML=`Monthly: <b>${fmt(monthly)}</b> · This period: <b>${fmt(total)}</b>`;}
+function calcDepr(){
+  var cost=+$('adjCost').value||0;
+  var salvage=+$('adjSalvage').value||0;
+  var life=+$('adjLife').value||0;
+  var months=+$('adjMonths').value||1;
+  if(!cost||!life){$('deprResult').textContent='Enter cost and life.';return;}
+  var monthly=(cost-salvage)/life;
+  $('deprResult').innerHTML='Monthly: <b>'+fmt(monthly)+'</b> · This period: <b>'+fmt(monthly*months)+'</b>';
+}
 function proposeAdjustment(){
-  const type=$('adjType').value;const period=$('adjPeriod').value;const lastDay=period?new Date(+period.split('-')[0],+period.split('-')[1],0).getDate():28;const date=period?period+'-'+String(lastDay).padStart(2,'0'):today;
-  let debitAcct,creditAcct,amount,desc;const reverse=$('adjReverse')?$('adjReverse').checked:false;const reversalDate=($('adjReverseDate')&&$('adjReverseDate').value)?$('adjReverseDate').value:(period?nextPeriodFirstDay(period+'-15'):null);
-  if(type==='depreciation'){debitAcct=$('adjDeprAcct').value.trim();creditAcct=$('adjAccumAcct').value.trim();const cost=+$('adjCost').value||0;const salvage=+$('adjSalvage').value||0;const life=+$('adjLife').value||0;const months=+$('adjMonths').value||1;if(!cost||!life)return toast('Fill cost and life.','err');amount=((cost-salvage)/life)*months;desc='Adjusting: Depreciation'+(period?' ('+period+')':'');}
-  else{debitAcct=$('adjDebitAcct').value.trim();creditAcct=$('adjCreditAcct').value.trim();amount=+$('adjAmount').value||0;desc=$('adjDesc').value.trim()||('Adjusting: '+type);}
-  if(!debitAcct||!creditAcct)return toast('Both accounts required.','err');if(!(amount>0))return toast('Amount must be positive.','err');
-  pending.push({id:uid(),date,desc,amount,note:'Adjusting entry',kind:'adjusting',approved:true,reverse,reversalDate:reverse?reversalDate:null,lines:[{account:debitAcct,debit:amount,credit:0},{account:creditAcct,debit:0,credit:amount}]});
-  toast('Adjusting entry proposed.','ok');page('upload');setTimeout(()=>{ensureRegistrySync();drawReview();},100);
+  var type=$('adjType').value;
+  var period=$('adjPeriod').value;
+  var lastDay=period?new Date(+period.split('-')[0],+period.split('-')[1],0).getDate():28;
+  var date=period?period+'-'+String(lastDay).padStart(2,'0'):today;
+  var debitAcct,creditAcct,amount,desc;
+  var reverse=$('adjReverse')?$('adjReverse').checked:false;
+  if(type==='depreciation'){
+    debitAcct=$('adjDeprAcct').value.trim();
+    creditAcct=$('adjAccumAcct').value.trim();
+    var cost=+$('adjCost').value||0,salvage=+$('adjSalvage').value||0,life=+$('adjLife').value||0,months=+$('adjMonths').value||1;
+    if(!cost||!life){toast('Fill cost and life.','err');return;}
+    amount=((cost-salvage)/life)*months;
+    desc='Adjusting: Depreciation'+(period?' ('+period+')':'');
+  }else{
+    debitAcct=$('adjDebitAcct').value.trim();
+    creditAcct=$('adjCreditAcct').value.trim();
+    amount=+$('adjAmount').value||0;
+    desc=$('adjDesc').value.trim()||('Adjusting: '+type);
+  }
+  if(!debitAcct||!creditAcct){toast('Both accounts required.','err');return;}
+  if(!(amount>0)){toast('Amount must be positive.','err');return;}
+  pending.push({id:uid(),date:date,desc:desc,amount:amount,note:'Adjusting',kind:'adjusting',approved:true,reverse:reverse,reversalDate:reverse?nextPeriodFirstDay(date):null,lines:[{account:debitAcct,debit:amount,credit:0},{account:creditAcct,debit:0,credit:amount}]});
+  toast('Proposed.','ok');page('upload');setTimeout(function(){ensureRegistrySync();drawReview();},100);
 }
-function renderAdjPreview(){const period=$('adjPeriod').value;if(!period)return $('adjPreview').innerHTML='<div class="muted small">Choose period.</div>';const pe=entries.filter(e=>(e.date||'').slice(0,7)===period&&e.kind!=='closing');const m=balances(pe);const names=Object.keys(m);const rev=names.filter(n=>accountType(n)==='revenue').reduce((s,n)=>s-net(m,n),0);const exp=names.filter(n=>accountType(n)==='expense').reduce((s,n)=>s+net(m,n),0);const adj=pe.filter(e=>e.kind==='adjusting');const adjTotal=adj.reduce((s,e)=>s+e.lines.reduce((ss,l)=>ss+l.debit,0),0)/2;$('adjPreview').innerHTML=`<table><tbody><tr><td>Revenue</td><td class="num">${fmt(rev)}</td></tr><tr><td>Expenses</td><td class="num">${fmt(exp)}</td></tr><tr><th>Net income</th><th class="num">${fmt(rev-exp)}</th></tr><tr><td>Adjusting entries</td><td class="num">${adj.length}</td></tr></tbody></table>`;}
-function renderAdjustingList(){const list=entries.filter(e=>e.kind==='adjusting').sort((a,b)=>(b.date||'').localeCompare(a.date||''));$('adjCount').textContent=list.length?`${list.length} entr${list.length===1?'y':'ies'}`:'';if(!list.length){$('adjustingList').innerHTML='<div class="empty"><p class="small">No adjusting entries yet.</p></div>';return;}$('adjustingList').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Date</th><th>Description</th><th class="num">Amount</th><th>Reversal</th><th></th></tr></thead><tbody>${list.map(e=>{const amt=e.lines.reduce((s,l)=>s+l.debit,0);const rev=e.reversedById?entries.find(x=>x.id===e.reversedById):null;return `<tr><td>${fmtDate(e.date)}</td><td>${esc(e.desc)}</td><td class="num">${fmt(amt)}</td><td>${rev?`<button class="rev-target" onclick="jumpToEntry('${rev.id}')">Reversed ${fmtDate(rev.date)}</button>`:'<span class="muted small">—</span>'}</td><td class="right"><button class="btn light sm" onclick="deleteEntry('${e.id}')">Remove</button></td></tr>`;}).join('')}</tbody></table></div>`;}
-function jumpToEntry(id){page('journal');setTimeout(()=>{const el=document.querySelector(`[data-entry-id="${CSS.escape(id)}"]`);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.transition='box-shadow .3s';el.style.boxShadow='0 0 0 3px rgba(200,153,46,.5)';setTimeout(()=>{el.style.boxShadow='';},2000);}},120);}
-function buildClosingEntries(period){const pe=entries.filter(e=>(e.date||'').slice(0,7)===period&&e.kind!=='closing');const m=balances(pe);const names=Object.keys(m);const revenues=names.filter(n=>accountType(n)==='revenue');const expenses=names.filter(n=>accountType(n)==='expense');const drawings=names.filter(n=>accountType(n)==='equity'&&/drawing/i.test(n));const entriesOut=[];const endDate=period+'-'+String(new Date(+period.split('-')[0],+period.split('-')[1],0).getDate()).padStart(2,'0');
-  if(revenues.length){const lines=revenues.map(n=>{const bal=-net(m,n);if(Math.abs(bal)<0.005)return null;return{account:n,debit:bal,credit:0};}).filter(Boolean);const total=lines.reduce((s,l)=>s+l.debit,0);if(total>0){lines.push({account:'Income Summary',debit:0,credit:total});entriesOut.push({desc:`Closing: Close revenues for ${period}`,date:endDate,kind:'closing',lines});}}
-  if(expenses.length){const lines=expenses.map(n=>{const bal=net(m,n);if(Math.abs(bal)<0.005)return null;return{account:n,debit:0,credit:bal};}).filter(Boolean);const total=lines.reduce((s,l)=>s+l.credit,0);if(total>0){lines.push({account:'Income Summary',debit:total,credit:0});entriesOut.push({desc:`Closing: Close expenses for ${period}`,date:endDate,kind:'closing',lines});}}
-  const revTotal=revenues.reduce((s,n)=>s-net(m,n),0);const expTotal=expenses.reduce((s,n)=>s+net(m,n),0);const income=revTotal-expTotal;
-  if(Math.abs(income)>=0.005){if(income>0){entriesOut.push({desc:`Closing: Close net income for ${period}`,date:endDate,kind:'closing',lines:[{account:'Income Summary',debit:income,credit:0},{account:'Owner, Capital',debit:0,credit:income}]});}else{const loss=-income;entriesOut.push({desc:`Closing: Close net loss for ${period}`,date:endDate,kind:'closing',lines:[{account:'Owner, Capital',debit:loss,credit:0},{account:'Income Summary',debit:0,credit:loss}]});}}
-  if(drawings.length){const total=drawings.reduce((s,n)=>s+net(m,n),0);if(total>0){const lines=drawings.map(n=>{const bal=net(m,n);if(Math.abs(bal)<0.005)return null;return{account:n,debit:0,credit:bal};}).filter(Boolean);lines.push({account:'Owner, Capital',debit:total,credit:0});entriesOut.push({desc:`Closing: Close drawings for ${period}`,date:endDate,kind:'closing',lines});}}
-  return entriesOut;
+function renderAdjPreview(){
+  var period=$('adjPeriod').value;
+  if(!period){$('adjPreview').innerHTML='<div class="muted small">Choose period.</div>';return;}
+  var pe=entries.filter(function(e){return (e.date||'').slice(0,7)===period&&e.kind!=='closing';});
+  var m=balances(pe);var names=Object.keys(m);
+  var rev=names.filter(function(n){return accountType(n)==='revenue';}).reduce(function(s,n){return s-net(m,n);},0);
+  var exp=names.filter(function(n){return accountType(n)==='expense';}).reduce(function(s,n){return s+net(m,n);},0);
+  $('adjPreview').innerHTML='<table><tbody><tr><td>Revenue</td><td class="num">'+fmt(rev)+'</td></tr><tr><td>Expenses</td><td class="num">'+fmt(exp)+'</td></tr><tr><th>Net income</th><th class="num">'+fmt(rev-exp)+'</th></tr></tbody></table>';
 }
-function renderClosingPreview(){const period=$('closePeriod').value;if(!period)return $('closingPreview').innerHTML='';const preview=buildClosingEntries(period);if(!preview.length){$('closingPreview').innerHTML=`<div class="card"><div class="empty"><h4>Nothing to close</h4><p>No revenue, expense, or drawing balances for ${esc(period)}.</p></div></div>`;return;}$('closingPreview').innerHTML=`<div class="card"><h3>Proposed closing entries</h3><p class="muted small">Preview. Click "Post closing" to commit.</p>${preview.map((e,i)=>`<div class="closing-preview"><b>${i+1}. ${esc(e.desc)}</b><table><tbody>${e.lines.map(l=>`<tr><td>${l.debit?esc(accountDisplayName(l.account)):''}</td><td class="num">${l.debit?fmt(l.debit):''}</td><td class="num" style="padding-left:24px">${l.credit?fmt(l.credit):''}</td><td style="padding-left:12px">${l.credit?esc(accountDisplayName(l.account)):''}</td></tr>`).join('')}</tbody></table></div>`).join('')}</div>`;}
-function closePeriodNow(){const period=$('closePeriod').value;if(!period)return toast('Choose period.','err');if((settings.periods||{})[period]){return confirmDialog('Already closed',`${period} was closed. Close again?`,()=>doClosePeriod(period),'Again',true);}doClosePeriod(period);}
-function doClosePeriod(period){const preview=buildClosingEntries(period);if(!preview.length)return toast('Nothing to close.','err');confirmDialog(`Close ${period}?`,`${preview.length} closing entries will be posted.`,()=>{if(!settings.periods)settings.periods={};const ids=[];preview.forEach(p=>{const e={id:uid(),date:p.date,desc:p.desc,lines:p.lines,kind:'closing'};entries.push(e);ids.push(e.id);});settings.periods[period]={closedAt:new Date().toISOString(),closingEntryIds:ids};saveState();render();renderClosedPeriods();renderClosingPreview();toast(`Closed ${period}.`,'ok','Undo',()=>{entries=entries.filter(e=>!ids.includes(e.id));delete settings.periods[period];saveState();render();renderClosedPeriods();toast('Undone.','ok');},10000);},'Close',false);}
-function reopenPeriod(period){const info=(settings.periods||{})[period];if(!info)return;confirmDialog('Re-open?',`All ${info.closingEntryIds.length} closing entries removed.`,()=>{const ids=new Set(info.closingEntryIds);entries=entries.filter(e=>!ids.has(e.id));delete settings.periods[period];saveState();render();renderClosedPeriods();toast('Re-opened.','ok');},'Re-open',false);}
-function renderClosedPeriods(){const periods=Object.keys(settings.periods||{}).sort().reverse();if(!periods.length){$('closedPeriodsList').innerHTML='<div class="empty"><p class="small">No closed periods.</p></div>';return;}$('closedPeriodsList').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Period</th><th>Closed</th><th class="num">Entries</th><th></th></tr></thead><tbody>${periods.map(p=>{const info=settings.periods[p];return `<tr><td><b>${esc(p)}</b></td><td class="small">${new Date(info.closedAt).toLocaleString()}</td><td class="num">${info.closingEntryIds.length}</td><td class="right"><button class="btn red sm" onclick="reopenPeriod('${p}')">Re-open</button></td></tr>`;}).join('')}</tbody></table></div>`;}
-let wsAdjustments={};
-function wsRange(){const mode=settings.wsPeriodMode||'month';const period=$('wsPeriod')?$('wsPeriod').value:today.slice(0,7);if(mode==='custom'){const from=$('wsFrom').value,to=$('wsTo').value;if(!from||!to)return{from:today,to:today,label:'Custom'};return{from,to,label:`${fmtDate(from)} – ${fmtDate(to)}`};}const [y,m]=period.split('-').map(Number);if(mode==='month'){const last=new Date(y,m,0).getDate();return{from:`${period}-01`,to:`${period}-${String(last).padStart(2,'0')}`,label:period,period};}if(mode==='quarter'){const qStart=Math.floor((m-1)/3)*3+1;const qEnd=qStart+2;const startStr=`${y}-${String(qStart).padStart(2,'0')}-01`;const last=new Date(y,qEnd,0).getDate();const endStr=`${y}-${String(qEnd).padStart(2,'0')}-${String(last).padStart(2,'0')}`;return{from:startStr,to:endStr,label:`Q${Math.ceil(m/3)} ${y}`};}if(mode==='ytd'){const last=new Date(y,m,0).getDate();return{from:`${y}-01-01`,to:`${period}-${String(last).padStart(2,'0')}`,label:`YTD ${y}`};}return{from:`${period}-01`,to:`${period}-28`,label:period};}
-function wsGetPeriodEntries(range){return entries.filter(e=>(e.date||'')>=range.from&&(e.date||'')<=range.to&&e.kind!=='closing');}
-function wsBuildRows(rangeOrPeriod){const range=typeof rangeOrPeriod==='string'?wsRange():rangeOrPeriod;const pe=wsGetPeriodEntries(range);const m=balances(pe);const names=Object.keys(m).sort((a,b)=>{const order={asset:0,liability:1,equity:2,revenue:3,expense:4};const ta=order[accountType(a)],tb=order[accountType(b)];return ta!==tb?ta-tb:a.localeCompare(b);});return names.map(n=>{const tbNet=net(m,n);const tbDr=Math.max(tbNet,0);const tbCr=Math.max(-tbNet,0);const adj=wsAdjustments[n]||{debit:0,credit:0};const adjDr=+adj.debit||0;const adjCr=+adj.credit||0;const adjNet=tbNet+adjDr-adjCr;const atbDr=Math.max(adjNet,0);const atbCr=Math.max(-adjNet,0);const type=accountType(n);const isDr=(type==='expense')?atbDr:0;const isCr=(type==='revenue')?atbCr:0;const bsDr=(type==='asset'||type==='liability'||type==='equity')?atbDr:0;const bsCr=(type==='asset'||type==='liability'||type==='equity')?atbCr:0;return{name:n,type,tbDr,tbCr,adjDr,adjCr,atbDr,atbCr,isDr,isCr,bsDr,bsCr};});}
-function setWsMode(mode){settings.wsMode=mode;saveState();document.querySelectorAll('#wsModeToggle button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));const hint=$('wsHint');if(hint)hint.textContent=mode==='edit'?'Interactive mode: enter adjustments in Adj Dr / Adj Cr. Totals recalc live.':'View mode. Switch to Interactive to type adjustments.';renderWorksheet();}
-function setWsPeriodMode(mode){settings.wsPeriodMode=mode;saveState();document.querySelectorAll('#wsPeriodModeToggle button').forEach(b=>b.classList.toggle('active',b.dataset.pmode===mode));$('wsMonthField').style.display=(mode==='month'||mode==='quarter'||mode==='ytd')?'block':'none';$('wsCustomRange').style.display=(mode==='custom')?'flex':'none';if(mode==='custom'){if(!$('wsFrom').value)$('wsFrom').value=today.slice(0,8)+'01';if(!$('wsTo').value)$('wsTo').value=today;}renderWorksheet();}
-function setWsPostMode(mode){settings.wsPostMode=mode;saveState();document.querySelectorAll('#wsPostModeToggle button').forEach(b=>b.classList.toggle('active',b.dataset.pmode===mode));}
+function renderAdjustingList(){
+  var list=entries.filter(function(e){return e.kind==='adjusting';}).sort(function(a,b){return (b.date||'').localeCompare(a.date||'');});
+  $('adjCount').textContent=list.length?list.length+' entries':'';
+  if(!list.length){$('adjustingList').innerHTML='<div class="empty"><p class="small">None yet.</p></div>';return;}
+  $('adjustingList').innerHTML='<div class="table-wrap"><table><thead><tr><th>Date</th><th>Description</th><th class="num">Amount</th><th></th></tr></thead><tbody>'+list.map(function(e){var amt=e.lines.reduce(function(s,l){return s+l.debit;},0);return '<tr><td>'+fmtDate(e.date)+'</td><td>'+esc(e.desc)+'</td><td class="num">'+fmt(amt)+'</td><td class="right"><button class="btn light sm" onclick="deleteEntry(\''+e.id+'\')">Remove</button></td></tr>';}).join('')+'</tbody></table></div>';
+}
+function buildClosingEntries(period){
+  var pe=entries.filter(function(e){return (e.date||'').slice(0,7)===period&&e.kind!=='closing';});
+  var m=balances(pe);var names=Object.keys(m);
+  var revenues=names.filter(function(n){return accountType(n)==='revenue';});
+  var expenses=names.filter(function(n){return accountType(n)==='expense';});
+  var drawings=names.filter(function(n){return accountType(n)==='equity'&&/drawing/i.test(n);});
+  var out=[];var endDate=period+'-'+String(new Date(+period.split('-')[0],+period.split('-')[1],0).getDate()).padStart(2,'0');
+  if(revenues.length){
+    var lines=revenues.map(function(n){var bal=-net(m,n);return Math.abs(bal)<0.005?null:{account:n,debit:bal,credit:0};}).filter(Boolean);
+    var total=lines.reduce(function(s,l){return s+l.debit;},0);
+    if(total>0){lines.push({account:'Income Summary',debit:0,credit:total});out.push({desc:'Close revenues '+period,date:endDate,kind:'closing',lines:lines});}
+  }
+  if(expenses.length){
+    var lines2=expenses.map(function(n){var bal=net(m,n);return Math.abs(bal)<0.005?null:{account:n,debit:0,credit:bal};}).filter(Boolean);
+    var total2=lines2.reduce(function(s,l){return s+l.credit;},0);
+    if(total2>0){lines2.push({account:'Income Summary',debit:total2,credit:0});out.push({desc:'Close expenses '+period,date:endDate,kind:'closing',lines:lines2});}
+  }
+  var revTotal=revenues.reduce(function(s,n){return s-net(m,n);},0);
+  var expTotal=expenses.reduce(function(s,n){return s+net(m,n);},0);
+  var income=revTotal-expTotal;
+  if(Math.abs(income)>=0.005){
+    if(income>0){out.push({desc:'Close net income '+period,date:endDate,kind:'closing',lines:[{account:'Income Summary',debit:income,credit:0},{account:'Owner, Capital',debit:0,credit:income}]});}
+    else{var loss=-income;out.push({desc:'Close net loss '+period,date:endDate,kind:'closing',lines:[{account:'Owner, Capital',debit:loss,credit:0},{account:'Income Summary',debit:0,credit:loss}]});}
+  }
+  if(drawings.length){
+    var total3=drawings.reduce(function(s,n){return s+net(m,n);},0);
+    if(total3>0){
+      var lines3=drawings.map(function(n){var bal=net(m,n);return Math.abs(bal)<0.005?null:{account:n,debit:0,credit:bal};}).filter(Boolean);
+      lines3.push({account:'Owner, Capital',debit:total3,credit:0});
+      out.push({desc:'Close drawings '+period,date:endDate,kind:'closing',lines:lines3});
+    }
+  }
+  return out;
+}
+function renderClosingPreview(){
+  var period=$('closePeriod').value;
+  if(!period){$('closingPreview').innerHTML='';return;}
+  var preview=buildClosingEntries(period);
+  if(!preview.length){$('closingPreview').innerHTML='<div class="card"><div class="empty"><h4>Nothing to close</h4><p>No revenue, expense, or drawing balances for '+esc(period)+'.</p></div></div>';return;}
+  $('closingPreview').innerHTML='<div class="card"><h3>Proposed for '+esc(period)+'</h3>'+preview.map(function(e,i){return '<div class="closing-preview"><b>'+(i+1)+'. '+esc(e.desc)+'</b><table><tbody>'+e.lines.map(function(l){return '<tr><td>'+(l.debit?esc(accountDisplayName(l.account)):'')+'</td><td class="num">'+(l.debit?fmt(l.debit):'')+'</td><td class="num" style="padding-left:24px">'+(l.credit?fmt(l.credit):'')+'</td><td style="padding-left:12px">'+(l.credit?esc(accountDisplayName(l.account)):'')+'</td></tr>';}).join('')+'</tbody></table></div>';}).join('')+'</div>';
+}
+function closePeriodNow(){
+  var period=$('closePeriod').value;
+  if(!period){toast('Choose period.','err');return;}
+  var preview=buildClosingEntries(period);
+  if(!preview.length){toast('Nothing to close.','err');return;}
+  confirmDialog('Close '+period+'?',preview.length+' closing entries will post.',function(){
+    if(!settings.periods)settings.periods={};
+    var ids=[];
+    preview.forEach(function(p){var e={id:uid(),date:p.date,desc:p.desc,lines:p.lines,kind:'closing'};entries.push(e);ids.push(e.id);});
+    settings.periods[period]={closedAt:new Date().toISOString(),closingEntryIds:ids};
+    saveState();render();renderClosedPeriods();renderClosingPreview();
+    toast('Closed '+period+'.','ok','Undo',function(){entries=entries.filter(function(e){return ids.indexOf(e.id)===-1;});delete settings.periods[period];saveState();render();renderClosedPeriods();},10000);
+  },'Close',false);
+}
+function renderClosedPeriods(){
+  var periods=Object.keys(settings.periods||{}).sort().reverse();
+  if(!periods.length){$('closedPeriodsList').innerHTML='<div class="empty"><p class="small">None.</p></div>';return;}
+  $('closedPeriodsList').innerHTML='<div class="table-wrap"><table><thead><tr><th>Period</th><th>Closed</th><th class="num">Entries</th></tr></thead><tbody>'+periods.map(function(p){var info=settings.periods[p];return '<tr><td><b>'+esc(p)+'</b></td><td class="small">'+new Date(info.closedAt).toLocaleString()+'</td><td class="num">'+info.closingEntryIds.length+'</td></tr>';}).join('')+'</tbody></table></div>';
+}
+var wsAdjustments={};
+function wsRange(){
+  var mode=settings.wsPeriodMode||'month';
+  var period=$('wsPeriod')?$('wsPeriod').value:today.slice(0,7);
+  if(mode==='custom'){var from=$('wsFrom').value,to=$('wsTo').value;if(!from||!to)return{from:today,to:today,label:'Custom'};return{from:from,to:to,label:fmtDate(from)+' – '+fmtDate(to)};}
+  var parts=period.split('-');var y=+parts[0],m=+parts[1];
+  if(mode==='month'){var last=new Date(y,m,0).getDate();return{from:period+'-01',to:period+'-'+String(last).padStart(2,'0'),label:period};}
+  if(mode==='quarter'){var qStart=Math.floor((m-1)/3)*3+1;var qEnd=qStart+2;var startStr=y+'-'+String(qStart).padStart(2,'0')+'-01';var last2=new Date(y,qEnd,0).getDate();var endStr=y+'-'+String(qEnd).padStart(2,'0')+'-'+String(last2).padStart(2,'0');return{from:startStr,to:endStr,label:'Q'+Math.ceil(m/3)+' '+y};}
+  if(mode==='ytd'){var last3=new Date(y,m,0).getDate();return{from:y+'-01-01',to:period+'-'+String(last3).padStart(2,'0'),label:'YTD '+y};}
+  return{from:period+'-01',to:period+'-28',label:period};
+}
+function wsGetPeriodEntries(range){return entries.filter(function(e){return (e.date||'')>=range.from&&(e.date||'')<=range.to&&e.kind!=='closing';});}
+function wsBuildRows(){
+  var range=wsRange();
+  var pe=wsGetPeriodEntries(range);
+  var m=balances(pe);
+  var names=Object.keys(m).sort(function(a,b){var order={asset:0,liability:1,equity:2,revenue:3,expense:4};var ta=order[accountType(a)],tb=order[accountType(b)];return ta!==tb?ta-tb:a.localeCompare(b);});
+  return names.map(function(n){
+    var tbNet=net(m,n);
+    var tbDr=Math.max(tbNet,0),tbCr=Math.max(-tbNet,0);
+    var adj=wsAdjustments[n]||{debit:0,credit:0};
+    var adjDr=+adj.debit||0,adjCr=+adj.credit||0;
+    var adjNet=tbNet+adjDr-adjCr;
+    var atbDr=Math.max(adjNet,0),atbCr=Math.max(-adjNet,0);
+    var type=accountType(n);
+    var isDr=(type==='expense')?atbDr:0;
+    var isCr=(type==='revenue')?atbCr:0;
+    var bsDr=(type==='asset'||type==='liability'||type==='equity')?atbDr:0;
+    var bsCr=(type==='asset'||type==='liability'||type==='equity')?atbCr:0;
+    return{name:n,type:type,tbDr:tbDr,tbCr:tbCr,adjDr:adjDr,adjCr:adjCr,atbDr:atbDr,atbCr:atbCr,isDr:isDr,isCr:isCr,bsDr:bsDr,bsCr:bsCr};
+  });
+}
+function setWsMode(mode){
+  settings.wsMode=mode;saveState();
+  document.querySelectorAll('#wsModeToggle button').forEach(function(b){b.classList.toggle('active',b.dataset.mode===mode);});
+  var hint=$('wsHint');
+  if(hint)hint.textContent=mode==='edit'?'Interactive: enter adjustments. Totals recalc live.':'View mode. Switch to Interactive to type.';
+  renderWorksheet();
+}
+function setWsPeriodMode(mode){
+  settings.wsPeriodMode=mode;saveState();
+  document.querySelectorAll('#wsPeriodModeToggle button').forEach(function(b){b.classList.toggle('active',b.dataset.pmode===mode);});
+  $('wsMonthField').style.display=(mode==='month'||mode==='quarter'||mode==='ytd')?'block':'none';
+  $('wsCustomRange').style.display=(mode==='custom')?'flex':'none';
+  renderWorksheet();
+}
 function renderWorksheet(){
-  const mode=settings.wsMode||'view';const pmode=settings.wsPeriodMode||'month';
-  document.querySelectorAll('#wsModeToggle button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
-  document.querySelectorAll('#wsPeriodModeToggle button').forEach(b=>b.classList.toggle('active',b.dataset.pmode===pmode));
-  document.querySelectorAll('#wsPostModeToggle button').forEach(b=>b.classList.toggle('active',b.dataset.pmode===(settings.wsPostMode||'compound')));
-  const range=wsRange();const rows=wsBuildRows(range);
-  if(!rows.length){$('worksheetArea').innerHTML=`<div class="empty"><h4>No activity in ${esc(range.label)}</h4><p>Post transactions first.</p></div>`;$('wsPostArea').style.display='none';return;}
-  const tot=rows.reduce((s,r)=>({tbDr:s.tbDr+r.tbDr,tbCr:s.tbCr+r.tbCr,adjDr:s.adjDr+r.adjDr,adjCr:s.adjCr+r.adjCr,atbDr:s.atbDr+r.atbDr,atbCr:s.atbCr+r.atbCr,isDr:s.isDr+r.isDr,isCr:s.isCr+r.isCr,bsDr:s.bsDr+r.bsDr,bsCr:s.bsCr+r.bsCr}),{tbDr:0,tbCr:0,adjDr:0,adjCr:0,atbDr:0,atbCr:0,isDr:0,isCr:0,bsDr:0,bsCr:0});
-  const cellFmt=v=>v?fmt(v).replace('₱',''):'';
-  const headerRow=`<tr><th rowspan="2" style="text-align:left">Account</th><th colspan="2" class="group-start">Trial Balance</th><th colspan="2" class="group-start">Adjustments</th><th colspan="2" class="group-start">Adjusted TB</th><th colspan="2" class="group-start">Income Statement</th><th colspan="2" class="group-start">Balance Sheet</th></tr><tr><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th></tr>`;
-  const bodyRows=rows.map(r=>{const display=accountDisplayName(r.name);return `<tr data-ws-row="${esc(r.name)}"><td>${esc(display)} <span class="acct-chip ${r.type}" style="font-size:8.5px;padding:1px 5px">${r.type[0]}</span></td><td>${cellFmt(r.tbDr)}</td><td>${cellFmt(r.tbCr)}</td>${mode==='edit'?`<td class="group-start"><input class="worksheet-input" type="number" min="0" step=".01" value="${r.adjDr||''}" oninput="wsAdjust('${esc(r.name)}','debit',this.value)"></td><td><input class="worksheet-input" type="number" min="0" step=".01" value="${r.adjCr||''}" oninput="wsAdjust('${esc(r.name)}','credit',this.value)"></td>`:`<td class="group-start">${cellFmt(r.adjDr)}</td><td>${cellFmt(r.adjCr)}</td>`}<td class="group-start">${cellFmt(r.atbDr)}</td><td>${cellFmt(r.atbCr)}</td><td class="group-start">${cellFmt(r.isDr)}</td><td>${cellFmt(r.isCr)}</td><td class="group-start">${cellFmt(r.bsDr)}</td><td>${cellFmt(r.bsCr)}</td></tr>`;}).join('');
-  const totalRow=`<tr class="row-total"><td>TOTAL</td><td>${cellFmt(tot.tbDr)}</td><td>${cellFmt(tot.tbCr)}</td><td class="group-start">${cellFmt(tot.adjDr)}</td><td>${cellFmt(tot.adjCr)}</td><td class="group-start">${cellFmt(tot.atbDr)}</td><td>${cellFmt(tot.atbCr)}</td><td class="group-start">${cellFmt(tot.isDr)}</td><td>${cellFmt(tot.isCr)}</td><td class="group-start">${cellFmt(tot.bsDr)}</td><td>${cellFmt(tot.bsCr)}</td></tr>`;
-  const tbOk=Math.abs(tot.tbDr-tot.tbCr)<0.005;const adjOk=Math.abs(tot.adjDr-tot.adjCr)<0.005;const atbOk=Math.abs(tot.atbDr-tot.atbCr)<0.005;
-  let status='';if(!tbOk)status+='⚠ Trial Balance out of balance. ';if(mode==='edit'&&!adjOk)status+=`⚠ Adjustments don't balance (Dr ${fmt(tot.adjDr)} vs Cr ${fmt(tot.adjCr)}). `;if(!atbOk)status+='⚠ Adjusted TB out of balance. ';if(!status)status='✓ Worksheet is balanced.';
-  $('worksheetArea').innerHTML=`<div class="worksheet-status ${tbOk&&adjOk&&atbOk?'ok':'warn'}">${status}</div><table class="worksheet"><thead>${headerRow}</thead><tbody>${bodyRows}${totalRow}</tbody></table>`;
-  const has=Object.values(wsAdjustments).some(a=>(+a.debit||0)+(+a.credit||0)>0);
+  var mode=settings.wsMode||'view';
+  document.querySelectorAll('#wsModeToggle button').forEach(function(b){b.classList.toggle('active',b.dataset.mode===mode);});
+  document.querySelectorAll('#wsPeriodModeToggle button').forEach(function(b){b.classList.toggle('active',b.dataset.pmode===(settings.wsPeriodMode||'month'));});
+  var rows=wsBuildRows();
+  if(!rows.length){$('worksheetArea').innerHTML='<div class="empty"><h4>No activity</h4><p>Post transactions first.</p></div>';$('wsPostArea').style.display='none';return;}
+  var tot={tbDr:0,tbCr:0,adjDr:0,adjCr:0,atbDr:0,atbCr:0,isDr:0,isCr:0,bsDr:0,bsCr:0};
+  rows.forEach(function(r){tot.tbDr+=r.tbDr;tot.tbCr+=r.tbCr;tot.adjDr+=r.adjDr;tot.adjCr+=r.adjCr;tot.atbDr+=r.atbDr;tot.atbCr+=r.atbCr;tot.isDr+=r.isDr;tot.isCr+=r.isCr;tot.bsDr+=r.bsDr;tot.bsCr+=r.bsCr;});
+  var cellFmt=function(v){return v?fmt(v).replace('₱',''):'';};
+  var headerRow='<tr><th rowspan="2" style="text-align:left">Account</th><th colspan="2" class="group-start">Trial Balance</th><th colspan="2" class="group-start">Adjustments</th><th colspan="2" class="group-start">Adjusted TB</th><th colspan="2" class="group-start">Income Statement</th><th colspan="2" class="group-start">Balance Sheet</th></tr><tr><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th><th class="group-start">Dr</th><th>Cr</th></tr>';
+  var bodyRows=rows.map(function(r){
+    var display=accountDisplayName(r.name);
+    return '<tr data-ws-row="'+esc(r.name)+'"><td>'+esc(display)+' <span class="acct-chip '+r.type+'" style="font-size:8.5px;padding:1px 5px">'+r.type.charAt(0)+'</span></td><td>'+cellFmt(r.tbDr)+'</td><td>'+cellFmt(r.tbCr)+'</td>'+(mode==='edit'?'<td class="group-start"><input class="worksheet-input" type="number" min="0" step=".01" value="'+(r.adjDr||'')+'" oninput="wsAdjust(\''+esc(r.name)+'\',\'debit\',this.value)"></td><td><input class="worksheet-input" type="number" min="0" step=".01" value="'+(r.adjCr||'')+'" oninput="wsAdjust(\''+esc(r.name)+'\',\'credit\',this.value)"></td>':'<td class="group-start">'+cellFmt(r.adjDr)+'</td><td>'+cellFmt(r.adjCr)+'</td>')+'<td class="group-start">'+cellFmt(r.atbDr)+'</td><td>'+cellFmt(r.atbCr)+'</td><td class="group-start">'+cellFmt(r.isDr)+'</td><td>'+cellFmt(r.isCr)+'</td><td class="group-start">'+cellFmt(r.bsDr)+'</td><td>'+cellFmt(r.bsCr)+'</td></tr>';
+  }).join('');
+  var totalRow='<tr class="row-total"><td>TOTAL</td><td>'+cellFmt(tot.tbDr)+'</td><td>'+cellFmt(tot.tbCr)+'</td><td class="group-start">'+cellFmt(tot.adjDr)+'</td><td>'+cellFmt(tot.adjCr)+'</td><td class="group-start">'+cellFmt(tot.atbDr)+'</td><td>'+cellFmt(tot.atbCr)+'</td><td class="group-start">'+cellFmt(tot.isDr)+'</td><td>'+cellFmt(tot.isCr)+'</td><td class="group-start">'+cellFmt(tot.bsDr)+'</td><td>'+cellFmt(tot.bsCr)+'</td></tr>';
+  var tbOk=Math.abs(tot.tbDr-tot.tbCr)<0.005;
+  var adjOk=Math.abs(tot.adjDr-tot.adjCr)<0.005;
+  var atbOk=Math.abs(tot.atbDr-tot.atbCr)<0.005;
+  var status='';
+  if(!tbOk)status+='⚠ TB out of balance. ';
+  if(mode==='edit'&&!adjOk)status+='⚠ Adjustments do not balance. ';
+  if(!atbOk)status+='⚠ Adjusted TB out of balance. ';
+  if(!status)status='✓ Balanced.';
+  $('worksheetArea').innerHTML='<div class="worksheet-status '+(tbOk&&adjOk&&atbOk?'ok':'warn')+'">'+status+'</div><table class="worksheet"><thead>'+headerRow+'</thead><tbody>'+bodyRows+totalRow+'</tbody></table>';
+  var has=Object.keys(wsAdjustments).some(function(k){var a=wsAdjustments[k];return(+a.debit||0)+(+a.credit||0)>0;});
   $('wsPostArea').style.display=(mode==='edit'&&has)?'block':'none';
-  $('wsStatus').textContent=has?`${Object.values(wsAdjustments).filter(a=>(+a.debit||0)+(+a.credit||0)>0).length} adjusted. ${adjOk?'Balanced.':'⚠ Do NOT balance.'}`:'No adjustments.';
+  $('wsStatus').textContent=has?'Adjustments entered.':'None.';
 }
-function wsAdjust(name,side,value){if(!wsAdjustments[name])wsAdjustments[name]={debit:0,credit:0};wsAdjustments[name][side]=+value||0;renderWorksheet();}
-function clearWorksheetAdjustments(){if(!Object.keys(wsAdjustments).length)return;confirmDialog('Clear all?','Not posted yet.',()=>{wsAdjustments={};renderWorksheet();toast('Cleared.','ok');},'Clear',true);}
-function postWorksheetAdjustments(){const range=wsRange();if(!range.from||!range.to)return toast('Choose period.','err');const postDate=range.to;const entriesToPost=[];Object.keys(wsAdjustments).forEach(name=>{const a=wsAdjustments[name];const net=(+a.debit||0)-(+a.credit||0);if(Math.abs(net)<0.005)return;entriesToPost.push({name,net});});if(!entriesToPost.length)return toast('No adjustments.','err');const totalDr=entriesToPost.filter(e=>e.net>0).reduce((s,e)=>s+e.net,0);const totalCr=entriesToPost.filter(e=>e.net<0).reduce((s,e)=>s-e.net,0);if(Math.abs(totalDr-totalCr)>=0.005)return toast(`Don't balance: Dr ${fmt(totalDr)} vs Cr ${fmt(totalCr)}.`,'err');const postMode=settings.wsPostMode||'compound';const desc='Adjusting (worksheet): '+range.label;const doPost=()=>{const postedIds=[];if(postMode==='compound'){const lines=[];entriesToPost.forEach(e=>{if(e.net>0)lines.push({account:e.name,debit:e.net,credit:0});else lines.push({account:e.name,debit:0,credit:-e.net});});const id=uid();entries.push({id,date:postDate,desc,lines,kind:'adjusting'});postedIds.push(id);}else{const debits=entriesToPost.filter(e=>e.net>0).map(e=>({account:e.name,amount:e.net}));const credits=entriesToPost.filter(e=>e.net<0).map(e=>({account:e.name,amount:-e.net}));debits.sort((a,b)=>a.amount-b.amount);credits.sort((a,b)=>a.amount-b.amount);let di=0,ci=0,safety=0;while((di<debits.length||ci<credits.length)&&safety<200){safety++;const d=debits[di],c=credits[ci];if(!d&&!c)break;let amt;if(!c){amt=d.amount;di++;}else if(!d){amt=c.amount;ci++;}else{amt=Math.min(d.amount,c.amount);d.amount-=amt;c.amount-=amt;if(d.amount<0.005)di++;if(c.amount<0.005)ci++;}if(amt<0.005)continue;const id=uid();entries.push({id,date:postDate,desc:`Adjusting: ${d?d.account:'?'} / ${c?c.account:'?'}`,lines:[{account:d?d.account:'Income Summary',debit:amt,credit:0},{account:c?c.account:'Income Summary',debit:0,credit:amt}],kind:'adjusting'});postedIds.push(id);}}wsAdjustments={};saveState();render();renderWorksheet();toast(`${postedIds.length} posted.`,'ok','Undo',()=>{entries=entries.filter(e=>!postedIds.includes(e.id));saveState();render();renderWorksheet();},8000);};confirmDialog('Post?',`${entriesToPost.length} adjustment(s) totaling ${fmt(totalDr)} on ${postDate}.`,doPost,'Post',false);}
-function exportWorksheetCSV(){const range=wsRange();const rows=wsBuildRows(range);const out=[['account','type','tb_dr','tb_cr','adj_dr','adj_cr','atb_dr','atb_cr','is_dr','is_cr','bs_dr','bs_cr']];rows.forEach(r=>out.push([accountDisplayName(r.name),r.type,r.tbDr.toFixed(2),r.tbCr.toFixed(2),r.adjDr.toFixed(2),r.adjCr.toFixed(2),r.atbDr.toFixed(2),r.atbCr.toFixed(2),r.isDr.toFixed(2),r.isCr.toFixed(2),r.bsDr.toFixed(2),r.bsCr.toFixed(2)]));const csv=out.map(row=>row.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv'}));a.download=`worksheet-${range.label.replace(/\s/g,'')}.csv`;a.click();URL.revokeObjectURL(a.href);toast('Exported.','ok');}
-const PAGE_TITLES={home:'Dashboard',upload:'Transactions',journal:'Journal',ledger:'Ledger',trial:'Trial Balance',adjusting:'Adjusting Entries',closing:'Closing Entries',worksheet:'Worksheet',reports:'Financial Statements',archive:'Monthly Archive',accounts:'Chart of Accounts',settings:'Settings',help:'How to Use',about:'About'};
-function page(id){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===id));$('topbar-title').textContent=PAGE_TITLES[id]||id;closeSidebar();if(id==='journal')renderJournal();if(id==='ledger')ledgerOptions();if(id==='trial')trial();if(id==='archive')renderArchives();if(id==='accounts')renderAccounts();if(id==='settings'){renderHealth();renderPinStatus();applyTheme();}if(id==='adjusting'){updateAdjForm();renderAdjPreview();renderAdjustingList();}if(id==='closing'){renderClosingPreview();renderClosedPeriods();}if(id==='worksheet')renderWorksheet();settings.recent=[id,...(settings.recent||[]).filter(x=>x!==id)].slice(0,5);saveState();window.scrollTo({top:0,behavior:'smooth'});}
+function wsAdjust(name,side,value){
+  if(!wsAdjustments[name])wsAdjustments[name]={debit:0,credit:0};
+  wsAdjustments[name][side]=+value||0;
+  renderWorksheet();
+}
+function clearWorksheetAdjustments(){
+  if(!Object.keys(wsAdjustments).length)return;
+  confirmDialog('Clear all?','Not posted yet.',function(){wsAdjustments={};renderWorksheet();toast('Cleared.','ok');},'Clear');
+}
+function postWorksheetAdjustments(){
+  var range=wsRange();
+  var entriesToPost=[];
+  Object.keys(wsAdjustments).forEach(function(name){
+    var a=wsAdjustments[name];
+    var netAmt=(+a.debit||0)-(+a.credit||0);
+    if(Math.abs(netAmt)<0.005)return;
+    entriesToPost.push({name:name,net:netAmt});
+  });
+  if(!entriesToPost.length){toast('No adjustments.','err');return;}
+  var totalDr=entriesToPost.filter(function(e){return e.net>0;}).reduce(function(s,e){return s+e.net;},0);
+  var totalCr=entriesToPost.filter(function(e){return e.net<0;}).reduce(function(s,e){return s-e.net;},0);
+  if(Math.abs(totalDr-totalCr)>=0.005){toast('Adjustments do not balance.','err');return;}
+  confirmDialog('Post?',entriesToPost.length+' adjustments totaling '+fmt(totalDr)+' will post on '+range.to+'.',function(){
+    var lines=[];entriesToPost.forEach(function(e){if(e.net>0)lines.push({account:e.name,debit:e.net,credit:0});else lines.push({account:e.name,debit:0,credit:-e.net});});
+    var id=uid();
+    entries.push({id:id,date:range.to,desc:'Adjusting (worksheet): '+range.label,lines:lines,kind:'adjusting'});
+    wsAdjustments={};saveState();render();renderWorksheet();toast('Posted.','ok','Undo',function(){entries=entries.filter(function(e){return e.id!==id;});saveState();render();renderWorksheet();},8000);
+  },'Post',false);
+}
+function exportWorksheetCSV(){
+  var range=wsRange();
+  var rows=wsBuildRows();
+  var out=[['account','type','tb_dr','tb_cr','adj_dr','adj_cr','atb_dr','atb_cr','is_dr','is_cr','bs_dr','bs_cr']];
+  rows.forEach(function(r){out.push([accountDisplayName(r.name),r.type,r.tbDr.toFixed(2),r.tbCr.toFixed(2),r.adjDr.toFixed(2),r.adjCr.toFixed(2),r.atbDr.toFixed(2),r.atbCr.toFixed(2),r.isDr.toFixed(2),r.isCr.toFixed(2),r.bsDr.toFixed(2),r.bsCr.toFixed(2)]);});
+  var csv=out.map(function(row){return row.map(function(c){return '"'+String(c).replace(/"/g,'""')+'"';}).join(',');}).join('\n');
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv'}));
+  a.download='worksheet-'+range.label.replace(/\s/g,'')+'.csv';a.click();URL.revokeObjectURL(a.href);toast('Exported.','ok');
+}
+var PAGE_TITLES={home:'Dashboard',upload:'Transactions',journal:'Journal',ledger:'Ledger',trial:'Trial Balance',adjusting:'Adjusting',closing:'Closing',worksheet:'Worksheet',reports:'Statements',archive:'Archive',accounts:'Accounts',settings:'Settings',help:'Help',about:'About'};
+function page(id){
+  document.querySelectorAll('.page').forEach(function(x){x.classList.toggle('active',x.id===id);});
+  document.querySelectorAll('.nav button').forEach(function(x){x.classList.toggle('active',x.dataset.page===id);});
+  $('topbar-title').textContent=PAGE_TITLES[id]||id;
+  closeSidebar();
+  if(id==='journal')renderJournal();
+  if(id==='ledger')ledgerOptions();
+  if(id==='trial')trial();
+  if(id==='archive')renderArchives();
+  if(id==='accounts')renderAccounts();
+  if(id==='settings'){renderHealth();renderPinStatus();applyTheme();}
+  if(id==='adjusting'){updateAdjForm();renderAdjPreview();renderAdjustingList();}
+  if(id==='closing'){renderClosingPreview();renderClosedPeriods();}
+  if(id==='worksheet')renderWorksheet();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 function openSidebar(){$('sidebar').classList.add('open');$('scrim').classList.add('open');}
 function closeSidebar(){$('sidebar').classList.remove('open');$('scrim').classList.remove('open');}
-function render(){saveState();renderDashboard();if($('journal').classList.contains('active'))renderJournal();if($('trial').classList.contains('active'))trial();if($('settings').classList.contains('active'))renderHealth();if($('worksheet').classList.contains('active'))renderWorksheet();if($('adjusting').classList.contains('active')){renderAdjPreview();renderAdjustingList();}if($('accounts').classList.contains('active'))renderAccounts();const lines=entries.flatMap(e=>e.lines);const d=lines.reduce((s,l)=>s+l.debit,0),c=lines.reduce((s,l)=>s+l.credit,0);$('footStatus').textContent=Math.abs(d-c)<0.005?'Books balanced':'⚠ Out of balance';}
-function manual(){try{addPending($('txDate').value,$('txDesc').value.trim(),$('txAmt').value,$('txType').value);}catch(e){alert(e.message);}}
-document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>page(b.dataset.page));
-$('menuBtn').onclick=openSidebar;$('scrim').onclick=closeSidebar;
-$('themeBtn').onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+function render(){
+  saveState();
+  renderDashboard();
+  if($('journal').classList.contains('active'))renderJournal();
+  if($('trial').classList.contains('active'))trial();
+  if($('settings').classList.contains('active'))renderHealth();
+  if($('worksheet').classList.contains('active'))renderWorksheet();
+  if($('adjusting').classList.contains('active')){renderAdjPreview();renderAdjustingList();}
+  if($('accounts').classList.contains('active'))renderAccounts();
+  var lines=[];entries.forEach(function(e){e.lines.forEach(function(l){lines.push(l);});});
+  var d=lines.reduce(function(s,l){return s+l.debit;},0);
+  var c=lines.reduce(function(s,l){return s+l.credit;},0);
+  $('footStatus').textContent=Math.abs(d-c)<0.005?'Books balanced':'⚠ Out of balance';
+}
+function manual(){
+  try{addPending($('txDate').value,$('txDesc').value.trim(),$('txAmt').value,$('txType').value);}
+  catch(e){alert(e.message);}
+}
+document.querySelectorAll('.nav button').forEach(function(b){b.onclick=function(){page(b.dataset.page);};});
+$('menuBtn').onclick=openSidebar;
+$('scrim').onclick=closeSidebar;
+$('themeBtn').onclick=function(){setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');};
 $('cmdBtn').onclick=openCmd;
-document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openCmd();}if(e.key==='Escape'){closeCmd();closeModal();closeSidebar();}});
-if('serviceWorker' in navigator && location.protocol!=='file:'){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(err=>console.warn('SW registration failed',err));});}
+document.addEventListener('keydown',function(e){
+  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openCmd();}
+  if(e.key==='Escape'){closeCmd();closeModal();closeSidebar();}
+});
+if('serviceWorker' in navigator && location.protocol!=='file:'){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('sw.js').catch(function(err){console.warn('SW registration failed',err);});
+  });
+}
 function boot(){
-  loadState();applyTheme();
-  $('txDate').value=today;$('to').value=today;$('from').value=new Date(new Date().getFullYear(),0,1).toISOString().slice(0,10);
-  $('tbAsOf').value=today;$('archiveMonth').value=today.slice(0,7);$('wsPeriod').value=today.slice(0,7);
-  $('adjPeriod').value=today.slice(0,7);$('closePeriod').value=today.slice(0,7);
-  settings.tbMode=settings.tbMode||'adjusted';settings.wsMode=settings.wsMode||'view';settings.wsPeriodMode=settings.wsPeriodMode||'month';settings.wsPostMode=settings.wsPostMode||'compound';
+  loadState();
+  applyTheme();
+  $('txDate').value=today;
+  $('to').value=today;
+  $('from').value=new Date(new Date().getFullYear(),0,1).toISOString().slice(0,10);
+  $('tbAsOf').value=today;
+  $('archiveMonth').value=today.slice(0,7);
+  $('wsPeriod').value=today.slice(0,7);
+  $('adjPeriod').value=today.slice(0,7);
+  $('closePeriod').value=today.slice(0,7);
+  settings.tbMode=settings.tbMode||'adjusted';
+  settings.wsMode=settings.wsMode||'view';
+  settings.wsPeriodMode=settings.wsPeriodMode||'month';
   if(!settings.periods)settings.periods={};
-  setWsPeriodMode(settings.wsPeriodMode);setWsPostMode(settings.wsPostMode);
-  ensureRegistrySync();if(!Object.keys(settings.accounts||{}).length)seedDefaultAccounts(true);saveState();
-  renderPinStatus();renderHealth();render();updateAdjForm();renderAdjPreview();
-  if(!settings.onboarded)setTimeout(()=>{openModal('Welcome to SERBIZ',`<p>Double-entry accounting for service businesses. Everything stored locally in your browser.</p><p class="small muted">Export a JSON backup regularly from Settings.</p><div class="notice small">Tip: press <kbd>Ctrl</kbd>+<kbd>K</kbd> for command palette.</div>`,[{label:'Start exploring',onClick:()=>{settings.onboarded=true;saveState();closeModal();}}]);},400);
+  setWsPeriodMode(settings.wsPeriodMode);
+  ensureRegistrySync();
+  if(!Object.keys(settings.accounts||{}).length)seedDefaultAccounts(true);
+  saveState();
+  renderPinStatus();
+  renderHealth();
+  render();
+  updateAdjForm();
+  renderAdjPreview();
+  if(!settings.onboarded)setTimeout(function(){
+    openModal('Welcome to SERBIZ','<p>Double-entry accounting for service businesses. Data stored locally in your browser.</p><p class="small muted">Export a JSON backup regularly from Settings.</p>',[{label:'Start',onClick:function(){settings.onboarded=true;saveState();closeModal();}}]);
+  },400);
 }
 boot();
 </script>
