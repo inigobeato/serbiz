@@ -450,7 +450,6 @@ function editEntry(id){
     Object.assign(e,{date,desc,lines});saveState();render();closeModal();toast('Entry updated.','ok');
   }}]);
 }
-function voidEntry(id){const e=entries.find(x=>x.id===id);if(!e)return;confirmDialog('Void this entry?','A reversing entry will be added. Original stays for audit.','()+','',0);}
 function voidEntry2(id){const e=entries.find(x=>x.id===id);if(!e)return;confirmDialog('Void this entry?','A reversing entry will be added today.','',()=>{
   const rev={id:uid(),date:today,desc:'VOID: '+e.desc,lines:e.lines.map(l=>({account:l.account,debit:l.credit,credit:l.debit}))};
   entries.push(rev);saveState();render();toast('Void posted.','ok','Undo',()=>{entries=entries.filter(x=>x.id!==rev.id);saveState();render();},8000);
